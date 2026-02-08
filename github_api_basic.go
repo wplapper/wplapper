@@ -6,6 +6,8 @@
 // The simple command demonstrates a simple functionality which
 // prompts the user for a GitHub username and lists all the public
 // organization memberships of the specified username.
+// https://pkg.go.dev/github.com/google/go-github/v82/github
+
 package main
 
 import (
@@ -18,6 +20,14 @@ import (
 	"github.com/google/go-github/v82/github"
 )
 
+type CommitFile struct {
+	Filename    string `json:"filename"`
+	Additions   int    `json:"additions"`
+	Deletions   int    `json:"deletions"`
+	LinesInFile int    `json:"lines_in_file"`
+	FileSize    int    `json:"filesize"`
+}
+
 type PRInfo struct {
 	PrNumber              int              `json:"pr_number"`
 	PRType                string           `json:"pr_type,omitempty"`
@@ -25,12 +35,43 @@ type PRInfo struct {
 	Author                string           `json:"author"`
 	Commits               int              `json:"number_commits,omitempty"`
 	Comments              int              `json:"number_comments,omitempty"`
-	FileList              []string         `json:"filelist"`
 	CreateDate            github.Timestamp `json:"create_date"`
 	ChangelogFileContents string           `json:"changelog,omitempty"`
+	Additions             int              `json:"additions"`
+	Deletions             int              `json:"deletions"`
+	LinesInFile           int              `json:"lines_in_file"`
+	FileSize              int              `json:"filesize"`
+	FileList              []CommitFile     `json:"filelist"`
 }
 
-// processPullRequest gathers data for one Pull Request
+func getFileContentLength(ctx context.Context, client *github.Client, owner string,
+	repo string, path string, ref string,
+) (int, int, error) {
+	fileContent, _, _, err := client.Repositories.GetContents(ctx, owner, repo, path,
+		&github.RepositoryContentGetOptions{Ref: ref})
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Repositories.GetContents failed with %v\n", err)
+		return 0, 0, err
+	}
+
+	content, err := fileContent.GetContent()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "GetContent failed with %v\n", err)
+		return 0, 0, err
+	}
+
+	// Count the lines
+	lineCount := strings.Count(content, "\n")
+
+	// If the file isn't empty and doesn't end in a newline, add 1
+	if len(content) > 0 && !strings.HasSuffix(content, "\n") {
+		lineCount++
+	}
+
+	return lineCount, len(content), nil
+}
+
+// processPullRequest gathers the data for one Pull Request
 func processPullRequest(ctx context.Context, client *github.Client,
 	owner string, repo string, pr *github.PullRequest,
 ) (PRInfo, error) {
@@ -52,16 +93,46 @@ func processPullRequest(ctx context.Context, client *github.Client,
 		return currentPR, err
 	}
 
+	head := pr.GetHead()
+	headOwner := head.GetRepo().GetOwner().GetLogin()
+	headRepo := head.GetRepo().GetName()
+	headSHA := head.GetSHA()
 	unreleasedFile := ""
-	filenames := []string{}
+	commitFiles := []CommitFile{}
+	additions := 0
+	deletions := 0
+	linesInFile := 0
+	fileSize := 0
 	for _, githubfile := range allFiles {
-		filename := githubfile.GetFilename()
-		filenames = append(filenames, filename)
+		filename := *(githubfile.Filename)
 		if strings.Contains(filename, "changelog/unreleased/") {
 			unreleasedFile = *(githubfile.Patch)
 		}
+
+		linesOfCode, size, err := getFileContentLength(ctx, client, headOwner, headRepo, filename, headSHA)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "getFileContentLength failed with %v\n", err)
+			err = nil
+		}
+
+		currentFile := CommitFile{
+			Filename:    filename,
+			Additions:   *(githubfile.Additions),
+			Deletions:   *(githubfile.Deletions),
+			LinesInFile: linesOfCode,
+			FileSize:    size,
+		}
+		additions += *(githubfile.Additions)
+		deletions += *(githubfile.Deletions)
+		linesInFile += linesOfCode
+		fileSize += size
+		commitFiles = append(commitFiles, currentFile)
 	}
-	currentPR.FileList = filenames
+	currentPR.FileList = commitFiles
+	currentPR.Additions = additions
+	currentPR.Deletions = deletions
+	currentPR.LinesInFile = linesInFile
+	currentPR.FileSize = fileSize
 
 	if unreleasedFile != "" {
 		lines := strings.Split(unreleasedFile, "\n")
@@ -74,7 +145,7 @@ func processPullRequest(ctx context.Context, client *github.Client,
 		if colon > 1 {
 			currentPR.PRType = prTypeLine[1:colon]
 		}
-		currentPR.ChangelogFileContents = strings.Join(lines, "\n")
+		currentPR.ChangelogFileContents = lines[0][1:]
 	}
 
 	// count Commits
@@ -117,11 +188,11 @@ func main() {
 
 	// 3. Loop through pages
 	counter := 0
-	limitCounter := 9999  // limit for testing
+	limitCounter := 999999 // limit for testing
 	for {
 		prs, resp, err := client.PullRequests.List(ctx, "restic", "restic", opts)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error fetching PRs: %v", err)
+			fmt.Fprintf(os.Stderr, "Error fetching PRs: %v\n", err)
 			return
 		}
 		if resp.Rate.Remaining < 10 {

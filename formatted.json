@@ -5,16 +5,62 @@
     "author": "intentionally-left-nil",
     "number_commits": 1,
     "number_comments": 2,
+    "create_date": "2026-02-07T03:31:39Z",
+    "additions": 295,
+    "deletions": 42,
+    "lines_in_file": 4217,
+    "filesize": 115602,
     "filelist": [
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/archiver/file_saver.go",
-      "internal/archiver/file_saver_test.go",
-      "internal/archiver/virtual_device_id.go",
-      "internal/archiver/virtual_device_id_test.go",
-      "internal/feature/registry.go"
-    ],
-    "create_date": "2026-02-07T03:31:39Z"
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 31,
+        "deletions": 20,
+        "lines_in_file": 982,
+        "filesize": 29054
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 87,
+        "deletions": 17,
+        "lines_in_file": 2672,
+        "filesize": 71628
+      },
+      {
+        "filename": "internal/archiver/file_saver.go",
+        "additions": 6,
+        "deletions": 3,
+        "lines_in_file": 277,
+        "filesize": 6207
+      },
+      {
+        "filename": "internal/archiver/file_saver_test.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 91,
+        "filesize": 2233
+      },
+      {
+        "filename": "internal/archiver/virtual_device_id.go",
+        "additions": 80,
+        "deletions": 0,
+        "lines_in_file": 80,
+        "filesize": 2585
+      },
+      {
+        "filename": "internal/archiver/virtual_device_id_test.go",
+        "additions": 86,
+        "deletions": 0,
+        "lines_in_file": 86,
+        "filesize": 1880
+      },
+      {
+        "filename": "internal/feature/registry.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 29,
+        "filesize": 2015
+      }
+    ]
   },
   {
     "pr_number": 5705,
@@ -22,32 +68,68 @@
     "title": "Show progress for `restic stats`",
     "author": "Paulomen2712",
     "number_commits": 2,
-    "filelist": [
-      "changelog/unreleased/issue-5689",
-      "cmd/restic/cmd_stats.go"
-    ],
     "create_date": "2026-02-06T14:17:39Z",
-    "changelog": "+Enhancement: Show progress bar for `restic stats`\n+\n+Previously, running `restic stats` would only give progress updates for loading the index.\n+Now it displays progress for how many snapshots, files, and blobs were processed so far.\n+This lets users better understand if the command is working as expected or where it is hanging.\n+\n+https://github.com/restic/restic/issues/5689\n+https://github.com/restic/restic/pull/55555\n\\ No newline at end of file"
+    "changelog": "Enhancement: Show progress bar for `restic stats`",
+    "additions": 92,
+    "deletions": 6,
+    "lines_in_file": 598,
+    "filesize": 18380,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5689",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 8,
+        "filesize": 416
+      },
+      {
+        "filename": "cmd/restic/cmd_stats.go",
+        "additions": 84,
+        "deletions": 6,
+        "lines_in_file": 590,
+        "filesize": 17964
+      }
+    ]
   },
   {
     "pr_number": 5704,
     "title": "Add space in error message",
     "author": "andreasscherbaum",
     "number_commits": 1,
+    "create_date": "2026-02-04T00:00:22Z",
+    "additions": 1,
+    "deletions": 1,
+    "lines_in_file": 245,
+    "filesize": 6524,
     "filelist": [
-      "cmd/restic/main.go"
-    ],
-    "create_date": "2026-02-04T00:00:22Z"
+      {
+        "filename": "cmd/restic/main.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 245,
+        "filesize": 6524
+      }
+    ]
   },
   {
     "pr_number": 5701,
     "title": "doc(installation): add mise alternative installation method",
     "author": "jylenhof",
     "number_commits": 1,
+    "create_date": "2026-02-02T06:28:36Z",
+    "additions": 11,
+    "deletions": 1,
+    "lines_in_file": 419,
+    "filesize": 13526,
     "filelist": [
-      "doc/020_installation.rst"
-    ],
-    "create_date": "2026-02-02T06:28:36Z"
+      {
+        "filename": "doc/020_installation.rst",
+        "additions": 11,
+        "deletions": 1,
+        "lines_in_file": 419,
+        "filesize": 13526
+      }
+    ]
   },
   {
     "pr_number": 5700,
@@ -55,38 +137,110 @@
     "title": "fail of RESTIC_READ_CONCURRENCY or RESTIC_COMPRESSION are invalid",
     "author": "MichaelEischer",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-4759",
-      "changelog/unreleased/pull-5592",
-      "cmd/restic/cmd_backup.go",
-      "internal/global/global.go",
-      "internal/global/global_test.go"
-    ],
     "create_date": "2026-02-01T14:54:10Z",
-    "changelog": "-Bugfix: Return error if `RESTIC_PACK_SIZE` contains invalid value\n-\n-If the environment variable `RESTIC_PACK_SIZE` could not be parsed, then\n-restic ignored its value. Now, the restic commands fail with an error, unless\n-the command-line option `--pack-size` was specified.\n-\n-https://github.com/restic/restic/pull/5592"
+    "changelog": "Bugfix: Return error if `RESTIC_PACK_SIZE` contains invalid value",
+    "additions": 73,
+    "deletions": 20,
+    "lines_in_file": 1474,
+    "filesize": 46942,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-4759",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 495
+      },
+      {
+        "filename": "changelog/unreleased/pull-5592",
+        "additions": 0,
+        "deletions": 7,
+        "lines_in_file": 0,
+        "filesize": 0
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 13,
+        "deletions": 5,
+        "lines_in_file": 707,
+        "filesize": 21529
+      },
+      {
+        "filename": "internal/global/global.go",
+        "additions": 12,
+        "deletions": 8,
+        "lines_in_file": 627,
+        "filesize": 21326
+      },
+      {
+        "filename": "internal/global/global_test.go",
+        "additions": 38,
+        "deletions": 0,
+        "lines_in_file": 130,
+        "filesize": 3592
+      }
+    ]
   },
   {
     "pr_number": 5699,
     "title": "doc: describe effects of relative paths on snapshot structure",
     "author": "MichaelEischer",
     "number_commits": 2,
+    "create_date": "2026-02-01T13:21:30Z",
+    "additions": 51,
+    "deletions": 3,
+    "lines_in_file": 1762,
+    "filesize": 77313,
     "filelist": [
-      "doc/040_backup.rst",
-      "doc/045_working_with_repos.rst",
-      "doc/047_tuning_parameters.rst",
-      "doc/050_restore.rst"
-    ],
-    "create_date": "2026-02-01T13:21:30Z"
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 35,
+        "deletions": 0,
+        "lines_in_file": 754,
+        "filesize": 31889
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 571,
+        "filesize": 25309
+      },
+      {
+        "filename": "doc/047_tuning_parameters.rst",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 145,
+        "filesize": 7186
+      },
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 292,
+        "filesize": 12929
+      }
+    ]
   },
   {
     "pr_number": 5698,
     "title": "docs: describe assigning ambient capabilities using systemd",
     "author": "MichaelEischer",
     "number_commits": 1,
+    "create_date": "2026-02-01T11:42:09Z",
+    "additions": 36,
+    "deletions": 8,
+    "lines_in_file": 396,
+    "filesize": 14228,
     "filelist": [
-      "doc/080_examples.rst"
-    ],
-    "create_date": "2026-02-01T11:42:09Z"
+      {
+        "filename": "doc/080_examples.rst",
+        "additions": 36,
+        "deletions": 8,
+        "lines_in_file": 396,
+        "filesize": 14228
+      }
+    ]
   },
   {
     "pr_number": 5686,
@@ -94,30 +248,154 @@
     "title": "Enhancement: Add --ignore-casing option for snapshot filtering",
     "author": "Paulomen2712",
     "number_commits": 9,
-    "filelist": [
-      "changelog/unreleased/issue-2331",
-      "cmd/restic/cmd_copy.go",
-      "cmd/restic/cmd_copy_integration_test.go",
-      "cmd/restic/cmd_find.go",
-      "cmd/restic/cmd_find_integration_test.go",
-      "cmd/restic/cmd_forget.go",
-      "cmd/restic/cmd_forget_integration_test.go",
-      "cmd/restic/cmd_ls_integration_test.go",
-      "cmd/restic/cmd_restore_integration_test.go",
-      "cmd/restic/cmd_snapshots.go",
-      "cmd/restic/cmd_snapshots_integration_test.go",
-      "cmd/restic/find.go",
-      "doc/045_working_with_repos.rst",
-      "doc/050_restore.rst",
-      "docker/entrypoint.sh",
-      "internal/data/snapshot.go",
-      "internal/data/snapshot_find.go",
-      "internal/data/snapshot_group.go",
-      "internal/data/snapshot_policy.go",
-      "internal/data/snapshot_test.go"
-    ],
     "create_date": "2026-01-28T15:38:41Z",
-    "changelog": "+Enhancement: Add case-insensitive support to commands with snapshot filters\n+\n+All `restic` commands, which use a `data.SnapshotFilter` now support\n+case-insensitive filtering when using `--host`, `--tag`, and `--path` filters.\n+This addresses the long-standing issue where machine names and\n+tags with inconsistent casing made it difficult to filter snapshots. Users in environments\n+with mixed-case hostnames (e.g. Windows) can now easily find and manage snapshots\n+without needing to look up the exact casing.\n+\n+https://github.com/restic/restic/issues/2331\n+https://github.com/restic/restic/pull/5686\n\\ No newline at end of file"
+    "changelog": "Enhancement: Add case-insensitive support to commands with snapshot filters",
+    "additions": 223,
+    "deletions": 37,
+    "lines_in_file": 4926,
+    "filesize": 160112,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-2331",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 11,
+        "filesize": 594
+      },
+      {
+        "filename": "cmd/restic/cmd_copy.go",
+        "additions": 3,
+        "deletions": 3,
+        "lines_in_file": 344,
+        "filesize": 10758
+      },
+      {
+        "filename": "cmd/restic/cmd_copy_integration_test.go",
+        "additions": 25,
+        "deletions": 0,
+        "lines_in_file": 222,
+        "filesize": 7430
+      },
+      {
+        "filename": "cmd/restic/cmd_find.go",
+        "additions": 1,
+        "deletions": 2,
+        "lines_in_file": 692,
+        "filesize": 17938
+      },
+      {
+        "filename": "cmd/restic/cmd_find_integration_test.go",
+        "additions": 17,
+        "deletions": 0,
+        "lines_in_file": 151,
+        "filesize": 5879
+      },
+      {
+        "filename": "cmd/restic/cmd_forget.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 404,
+        "filesize": 13023
+      },
+      {
+        "filename": "cmd/restic/cmd_forget_integration_test.go",
+        "additions": 6,
+        "deletions": 1,
+        "lines_in_file": 71,
+        "filesize": 2456
+      },
+      {
+        "filename": "cmd/restic/cmd_ls_integration_test.go",
+        "additions": 23,
+        "deletions": 0,
+        "lines_in_file": 188,
+        "filesize": 5065
+      },
+      {
+        "filename": "cmd/restic/cmd_restore_integration_test.go",
+        "additions": 22,
+        "deletions": 2,
+        "lines_in_file": 438,
+        "filesize": 14545
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 371,
+        "filesize": 9715
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots_integration_test.go",
+        "additions": 39,
+        "deletions": 9,
+        "lines_in_file": 97,
+        "filesize": 4094
+      },
+      {
+        "filename": "cmd/restic/find.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 81,
+        "filesize": 3783
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 30,
+        "deletions": 4,
+        "lines_in_file": 595,
+        "filesize": 26239
+      },
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 289,
+        "filesize": 12812
+      },
+      {
+        "filename": "docker/entrypoint.sh",
+        "additions": 0,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 338
+      },
+      {
+        "filename": "internal/data/snapshot.go",
+        "additions": 24,
+        "deletions": 9,
+        "lines_in_file": 283,
+        "filesize": 7547
+      },
+      {
+        "filename": "internal/data/snapshot_find.go",
+        "additions": 2,
+        "deletions": 1,
+        "lines_in_file": 195,
+        "filesize": 5232
+      },
+      {
+        "filename": "internal/data/snapshot_group.go",
+        "additions": 6,
+        "deletions": 2,
+        "lines_in_file": 123,
+        "filesize": 2652
+      },
+      {
+        "filename": "internal/data/snapshot_policy.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 310,
+        "filesize": 8852
+      },
+      {
+        "filename": "internal/data/snapshot_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 51,
+        "filesize": 1160
+      }
+    ]
   },
   {
     "pr_number": 5681,
@@ -125,15 +403,49 @@
     "title": "Enhancement: Allow stripping path components during restore",
     "author": "Paulomen2712",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5639",
-      "cmd/restic/cmd_restore.go",
-      "cmd/restic/cmd_restore_integration_test.go",
-      "doc/050_restore.rst",
-      "internal/restorer/restorer.go"
-    ],
     "create_date": "2026-01-21T15:06:13Z",
-    "changelog": "+Enhancement: Allow stripping directories when restoring\n+\n+Restic restore always restored the full backed up path to a target location.\n+For example restoring `/home/work/foo` to `/home/restores` would create `/home/restores/home/work/foo`.\n+Restic now, much like `tar` permits trimming the structure on restore allowing to skip first N levels of directories using the `--strip-components` option.\n+This way you can now restore  `/home/work/foo` to `/home/restores/foo` using `--strip-components=2`.\n+Pathnames with fewer elements will be silently skipped.\n+\n+https://github.com/restic/restic/issues/5639\n+https://github.com/restic/restic/pull/5681"
+    "changelog": "Enhancement: Allow stripping directories when restoring",
+    "additions": 169,
+    "deletions": 4,
+    "lines_in_file": 1959,
+    "filesize": 63566,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5639",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 640
+      },
+      {
+        "filename": "cmd/restic/cmd_restore.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 323,
+        "filesize": 9858
+      },
+      {
+        "filename": "cmd/restic/cmd_restore_integration_test.go",
+        "additions": 133,
+        "deletions": 0,
+        "lines_in_file": 551,
+        "filesize": 17220
+      },
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 292,
+        "filesize": 13129
+      },
+      {
+        "filename": "internal/restorer/restorer.go",
+        "additions": 12,
+        "deletions": 4,
+        "lines_in_file": 783,
+        "filesize": 22719
+      }
+    ]
   },
   {
     "pr_number": 5679,
@@ -142,12 +454,28 @@
     "author": "metalsp0rk",
     "number_commits": 2,
     "number_comments": 13,
-    "filelist": [
-      "changelog/unreleased/issue-5674",
-      "doc/075_scripting.rst"
-    ],
     "create_date": "2026-01-21T03:24:23Z",
-    "changelog": "+Enhancement: Expand `restic cat` documentation with detailed examples\n+\n+The documentation for the `restic cat` command was minimal and lacked\n+details about the various object types it supports. The documentation has been\n+expanded with comprehensive explanations and practical examples for each subcommand:\n+\n+- Added detailed documentation for all 8 object types: masterkey, config, snapshot,\n+  tree, blob, index, key, lock, and pack\n+- Included code examples showing JSON and binary output formats\n+- Clarified when output is JSON versus binary\n+- Added references to related commands (e.g., `restic ls` for human-readable tree output)\n+- Explained use cases for debugging and understanding repository structure\n+\n+https://github.com/restic/restic/issues/5674"
+    "changelog": "Enhancement: Expand `restic cat` documentation with detailed examples",
+    "additions": 219,
+    "deletions": 3,
+    "lines_in_file": 1050,
+    "filesize": 57330,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5674",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 752
+      },
+      {
+        "filename": "doc/075_scripting.rst",
+        "additions": 205,
+        "deletions": 3,
+        "lines_in_file": 1036,
+        "filesize": 56578
+      }
+    ]
   },
   {
     "pr_number": 5678,
@@ -155,14 +483,42 @@
     "title": "Enhancement: restic cat - add type `full-tree`",
     "author": "wplapper",
     "number_commits": 5,
-    "filelist": [
-      "changelog/unreleased/pull-5678",
-      "cmd/restic/cmd_cat.go",
-      "cmd/restic/cmd_cat_integration_test.go",
-      "cmd/restic/cmd_list_integration_test.go"
-    ],
     "create_date": "2026-01-20T17:54:12Z",
-    "changelog": "+Enhancement: add new type `tree-full` to `restic cat`\n+\n+`restic cat tree-full <snapshot-id[:subfolder]> generates JSON output for all\n+participating tree blobs for the selected snapshot or a subfolder thereof. This\n+will help when troubleshooting problems and relating directory names to JSON\n+nodes in the repository,\n+\n+https://github.com/restic/restic/pull/5679\n+https://github.com/restic/restic/pull/5678\n+https://github.com/restic/restic/issues/5674"
+    "changelog": "Enhancement: add new type `tree-full` to `restic cat`",
+    "additions": 150,
+    "deletions": 15,
+    "lines_in_file": 459,
+    "filesize": 12091,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5678",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 447
+      },
+      {
+        "filename": "cmd/restic/cmd_cat.go",
+        "additions": 72,
+        "deletions": 15,
+        "lines_in_file": 277,
+        "filesize": 6590
+      },
+      {
+        "filename": "cmd/restic/cmd_cat_integration_test.go",
+        "additions": 47,
+        "deletions": 0,
+        "lines_in_file": 47,
+        "filesize": 1530
+      },
+      {
+        "filename": "cmd/restic/cmd_list_integration_test.go",
+        "additions": 21,
+        "deletions": 0,
+        "lines_in_file": 125,
+        "filesize": 3524
+      }
+    ]
   },
   {
     "pr_number": 5677,
@@ -170,13 +526,35 @@
     "title": "Enhancement: snapshots: Add --sort-by-time option",
     "author": "flinteger-code",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/pull-5677",
-      "cmd/restic/cmd_snapshots.go",
-      "cmd/restic/cmd_snapshots_test.go"
-    ],
     "create_date": "2026-01-19T00:02:41Z",
-    "changelog": "+Enhancement: snapshots: Add --sort-by-time option to sort snapshots by time.\n+\n+Restic now supports sorting snapshots by timestamp with the new `--sort-by-time` option. When used with the `snapshots` command, it lets you list snapshots in ascending (asc) or descending (desc) time order, with ascending order as the default.\n+\n+https://github.com/restic/restic/pull/5677"
+    "changelog": "Enhancement: snapshots: Add --sort-by-time option to sort snapshots by time.",
+    "additions": 236,
+    "deletions": 13,
+    "lines_in_file": 613,
+    "filesize": 18881,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5677",
+        "additions": 5,
+        "deletions": 0,
+        "lines_in_file": 5,
+        "filesize": 367
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots.go",
+        "additions": 55,
+        "deletions": 11,
+        "lines_in_file": 415,
+        "filesize": 11347
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots_test.go",
+        "additions": 176,
+        "deletions": 2,
+        "lines_in_file": 193,
+        "filesize": 7167
+      }
+    ]
   },
   {
     "pr_number": 5675,
@@ -184,31 +562,67 @@
     "author": "wplapper",
     "number_commits": 4,
     "number_comments": 20,
+    "create_date": "2026-01-18T16:30:19Z",
+    "additions": 60,
+    "deletions": 3,
+    "lines_in_file": 1453,
+    "filesize": 78205,
     "filelist": [
-      "doc/045_working_with_repos.rst",
-      "doc/075_scripting.rst"
-    ],
-    "create_date": "2026-01-18T16:30:19Z"
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 55,
+        "deletions": 0,
+        "lines_in_file": 617,
+        "filesize": 27114
+      },
+      {
+        "filename": "doc/075_scripting.rst",
+        "additions": 5,
+        "deletions": 3,
+        "lines_in_file": 836,
+        "filesize": 51091
+      }
+    ]
   },
   {
     "pr_number": 5672,
     "title": "Enhancement: restic find - more integration tests",
     "author": "wplapper",
     "number_commits": 4,
+    "create_date": "2026-01-17T11:04:52Z",
+    "additions": 162,
+    "deletions": 0,
+    "lines_in_file": 296,
+    "filesize": 10391,
     "filelist": [
-      "cmd/restic/cmd_find_integration_test.go"
-    ],
-    "create_date": "2026-01-17T11:04:52Z"
+      {
+        "filename": "cmd/restic/cmd_find_integration_test.go",
+        "additions": 162,
+        "deletions": 0,
+        "lines_in_file": 296,
+        "filesize": 10391
+      }
+    ]
   },
   {
     "pr_number": 5669,
     "title": "Have `backup -vv` mention compressed size of added files",
     "author": "ilyagr",
     "number_commits": 1,
+    "create_date": "2026-01-16T02:37:54Z",
+    "additions": 2,
+    "deletions": 2,
+    "lines_in_file": 160,
+    "filesize": 4937,
     "filelist": [
-      "internal/ui/backup/text.go"
-    ],
-    "create_date": "2026-01-16T02:37:54Z"
+      {
+        "filename": "internal/ui/backup/text.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 160,
+        "filesize": 4937
+      }
+    ]
   },
   {
     "pr_number": 5668,
@@ -217,17 +631,63 @@
     "author": "wplapper",
     "number_commits": 17,
     "number_comments": 9,
-    "filelist": [
-      "changelog/unreleased/issue-5663",
-      "cmd/restic/cmd_diff.go",
-      "cmd/restic/cmd_diff_integration_test.go",
-      "doc/040_backup.rst",
-      "doc/075_scripting.rst",
-      "go.mod",
-      "go.sum"
-    ],
     "create_date": "2026-01-11T21:19:47Z",
-    "changelog": "+Enhancement: allow content comparison in `restic diff` command\n+\n+Restic diff now allows the user to visualize the differences of two snapsshots\n+of the same text file.\n+\n+Binary files will not be compared and text file comparison will be limited to\n+a size of 64 KiB by default. If you want to compare larger text files, use the option\n+`--diff-max-size` to modify the size limit.\n+The comparator uses the library algorithm implemented in \"github.com/hexops/gotextdiff/myers\".\n+\n+https://github.com/restic/restic/issues/5663\n+https://github.com/restic/restic/pull/5668"
+    "changelog": "Enhancement: allow content comparison in `restic diff` command",
+    "additions": 653,
+    "deletions": 30,
+    "lines_in_file": 3372,
+    "filesize": 164029,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5663",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 12,
+        "filesize": 559
+      },
+      {
+        "filename": "cmd/restic/cmd_diff.go",
+        "additions": 237,
+        "deletions": 6,
+        "lines_in_file": 700,
+        "filesize": 19383
+      },
+      {
+        "filename": "cmd/restic/cmd_diff_integration_test.go",
+        "additions": 276,
+        "deletions": 21,
+        "lines_in_file": 449,
+        "filesize": 13610
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 109,
+        "deletions": 1,
+        "lines_in_file": 827,
+        "filesize": 35447
+      },
+      {
+        "filename": "doc/075_scripting.rst",
+        "additions": 16,
+        "deletions": 2,
+        "lines_in_file": 939,
+        "filesize": 58136
+      },
+      {
+        "filename": "go.mod",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 107,
+        "filesize": 4910
+      },
+      {
+        "filename": "go.sum",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 338,
+        "filesize": 31984
+      }
+    ]
   },
   {
     "pr_number": 5666,
@@ -235,12 +695,28 @@
     "title": "Bugfix: restic find --json --show-pack-id: suppress text output in JSON mode",
     "author": "wplapper",
     "number_commits": 3,
-    "filelist": [
-      "changelog/unreleased/pull-5666",
-      "cmd/restic/cmd_find.go"
-    ],
     "create_date": "2026-01-11T10:40:56Z",
-    "changelog": "+Bugfix: restic find --json --show-pack-id suppresses some output in JSON mode\n+\n+When calling `restic find` with both options `--json --show-pack-id` in the past\n+it has generated JSON output as well as text output regarding packfiles.\n+The generation of text output is now suppressed in JSON mode.\n+\n+https://github.com/restic/restic/issues/5280\n+https://github.com/restic/restic/pull/5666"
+    "changelog": "Bugfix: restic find --json --show-pack-id suppresses some output in JSON mode",
+    "additions": 9,
+    "deletions": 1,
+    "lines_in_file": 701,
+    "filesize": 18431,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5666",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 8,
+        "filesize": 384
+      },
+      {
+        "filename": "cmd/restic/cmd_find.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 693,
+        "filesize": 18047
+      }
+    ]
   },
   {
     "pr_number": 5664,
@@ -248,13 +724,35 @@
     "title": "Bugfix: ``restic find --pack <tree-pack>`` did not produce output for tree packs",
     "author": "wplapper",
     "number_commits": 6,
-    "filelist": [
-      "changelog/unreleased/pull-5664",
-      "cmd/restic/cmd_find.go",
-      "cmd/restic/cmd_find_integration_test.go"
-    ],
     "create_date": "2026-01-10T16:19:46Z",
-    "changelog": "+Bugfix: restic find --pack <tree-pack> did not produce output for tree packs\n+\n+`restic find --pack` now produces output for a tree related packfile.\n+\n+https://github.com/restic/restic/issues/5280\n+https://github.com/restic/restic/pull/5664"
+    "changelog": "Bugfix: restic find --pack <tree-pack> did not produce output for tree packs",
+    "additions": 89,
+    "deletions": 2,
+    "lines_in_file": 914,
+    "filesize": 26204,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5664",
+        "additions": 6,
+        "deletions": 0,
+        "lines_in_file": 6,
+        "filesize": 237
+      },
+      {
+        "filename": "cmd/restic/cmd_find.go",
+        "additions": 12,
+        "deletions": 2,
+        "lines_in_file": 703,
+        "filesize": 18324
+      },
+      {
+        "filename": "cmd/restic/cmd_find_integration_test.go",
+        "additions": 71,
+        "deletions": 0,
+        "lines_in_file": 205,
+        "filesize": 7643
+      }
+    ]
   },
   {
     "pr_number": 5660,
@@ -262,43 +760,95 @@
     "title": "fix for S3 restore failing with 202 Accepted for cold storage",
     "author": "vadimpanin",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5659",
-      "internal/backend/s3/s3.go"
-    ],
     "create_date": "2026-01-01T06:38:04Z",
-    "changelog": "+Bugfix: Fix S3 DEEP_ARCHIVE restore failing with \"202 Accepted\"\n+\n+When restoring from S3 Glacier or DEEP_ARCHIVE storage classes using the\n+experimental `s3-restore` feature, restic incorrectly treated the HTTP 202\n+Accepted response as an error. This caused the restore to fail immediately\n+with the message \"202 Accepted\" instead of waiting for the objects to become\n+available.\n+\n+Restic now correctly recognizes HTTP 202 Accepted as a successful restore\n+initiation and waits for the objects to transition from cold storage before\n+proceeding with the restore.\n+\n+https://github.com/restic/restic/issues/5659\n+https://github.com/restic/restic/pull/5660\n\\ No newline at end of file"
+    "changelog": "Bugfix: Fix S3 DEEP_ARCHIVE restore failing with \"202 Accepted\"",
+    "additions": 18,
+    "deletions": 0,
+    "lines_in_file": 620,
+    "filesize": 17936,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5659",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 644
+      },
+      {
+        "filename": "internal/backend/s3/s3.go",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 606,
+        "filesize": 17292
+      }
+    ]
   },
   {
     "pr_number": 5652,
     "title": "docs: add systemd scheduling example",
     "author": "fabien-joubert",
     "number_commits": 7,
+    "create_date": "2025-12-28T09:37:38Z",
+    "additions": 180,
+    "deletions": 0,
+    "lines_in_file": 548,
+    "filesize": 19106,
     "filelist": [
-      "doc/080_examples.rst"
-    ],
-    "create_date": "2025-12-28T09:37:38Z"
+      {
+        "filename": "doc/080_examples.rst",
+        "additions": 180,
+        "deletions": 0,
+        "lines_in_file": 548,
+        "filesize": 19106
+      }
+    ]
   },
   {
     "pr_number": 5651,
     "title": "docs: clarify backup scheduling scope and common patterns",
     "author": "fabien-joubert",
     "number_commits": 1,
+    "create_date": "2025-12-27T22:51:59Z",
+    "additions": 68,
+    "deletions": 9,
+    "lines_in_file": 1695,
+    "filesize": 75115,
     "filelist": [
-      "doc/040_backup.rst",
-      "doc/design.rst"
-    ],
-    "create_date": "2025-12-27T22:51:59Z"
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 66,
+        "deletions": 9,
+        "lines_in_file": 859,
+        "filesize": 38304
+      },
+      {
+        "filename": "doc/design.rst",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 836,
+        "filesize": 36811
+      }
+    ]
   },
   {
     "pr_number": 5650,
     "title": "docs: add warning for capability-based non-root backups",
     "author": "fabien-joubert",
     "number_commits": 1,
+    "create_date": "2025-12-27T21:44:08Z",
+    "additions": 12,
+    "deletions": 0,
+    "lines_in_file": 380,
+    "filesize": 13913,
     "filelist": [
-      "doc/080_examples.rst"
-    ],
-    "create_date": "2025-12-27T21:44:08Z"
+      {
+        "filename": "doc/080_examples.rst",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 380,
+        "filesize": 13913
+      }
+    ]
   },
   {
     "pr_number": 5648,
@@ -306,15 +856,49 @@
     "title": "ui: don't rewrite unchanged lines in status bar",
     "author": "dgkmd",
     "number_commits": 3,
-    "filelist": [
-      "changelog/unreleased/issue-5562",
-      "internal/terminal/terminal_posix.go",
-      "internal/terminal/terminal_unix.go",
-      "internal/terminal/terminal_windows.go",
-      "internal/ui/termstatus/status.go"
-    ],
     "create_date": "2025-12-23T05:58:34Z",
-    "changelog": "+Enhancement: Do not rewrite unchanged lines every frame in status bar\n+\n+Status bars were entirely rewritten every frame if any of its content has updated.\n+This behavior had made any user interaction (such as selection) with status bar\n+impossible in certain terminal emulators, even with the unchanged lines.\n+Now it writes changed lines only at status bar update, thereby improving \n+user experience in those terminal emulators.\n+\n+https://github.com/restic/restic/issues/5562\n+https://github.com/restic/restic/pull/5648"
+    "changelog": "Enhancement: Do not rewrite unchanged lines every frame in status bar",
+    "additions": 83,
+    "deletions": 5,
+    "lines_in_file": 685,
+    "filesize": 18467,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5562",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 515
+      },
+      {
+        "filename": "internal/terminal/terminal_posix.go",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 51,
+        "filesize": 1548
+      },
+      {
+        "filename": "internal/terminal/terminal_unix.go",
+        "additions": 5,
+        "deletions": 0,
+        "lines_in_file": 40,
+        "filesize": 1033
+      },
+      {
+        "filename": "internal/terminal/terminal_windows.go",
+        "additions": 24,
+        "deletions": 0,
+        "lines_in_file": 153,
+        "filesize": 4630
+      },
+      {
+        "filename": "internal/ui/termstatus/status.go",
+        "additions": 31,
+        "deletions": 5,
+        "lines_in_file": 431,
+        "filesize": 10741
+      }
+    ]
   },
   {
     "pr_number": 5643,
@@ -322,10 +906,20 @@
     "author": "kjetilho",
     "number_commits": 4,
     "number_comments": 8,
+    "create_date": "2025-12-05T17:15:54Z",
+    "additions": 29,
+    "deletions": 17,
+    "lines_in_file": 293,
+    "filesize": 12941,
     "filelist": [
-      "doc/050_restore.rst"
-    ],
-    "create_date": "2025-12-05T17:15:54Z"
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 29,
+        "deletions": 17,
+        "lines_in_file": 293,
+        "filesize": 12941
+      }
+    ]
   },
   {
     "pr_number": 5623,
@@ -333,28 +927,90 @@
     "title": "--skip-if-unchanged skips backup based on targets",
     "author": "Paulomen2712",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5575",
-      "cmd/restic/cmd_backup_integration_test.go",
-      "doc/040_backup.rst",
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/backend/local/local_windows.go",
-      "internal/data/tree.go"
-    ],
     "create_date": "2025-11-27T14:26:27Z",
-    "changelog": "+Enhancement: Make --skip-if-unchanged ignore changes in parent directories\n+\n+Restic’s `backup` command previously created a new snapshot even when the\n+contents of the selected backup targets were unchanged. This happened because\n+`--skip-if-unchanged` also considered metadata changes in ancestor directories\n+outside the specified backup path. As a result, unrelated filesystem activity\n+(such as modifying files in parent directories) still triggered new snapshots.\n+\n+Restic now compares only the tree nodes corresponding to the actual backup\n+targets when `--skip-if-unchanged` is used. Snapshot creation is skipped as \n+long as the backed-up directory tree itself remains unchanged.\n+\n+https://github.com/restic/restic/issues/5575\n+https://github.com/restic/restic/pull/5623"
+    "changelog": "Enhancement: Make --skip-if-unchanged ignore changes in parent directories",
+    "additions": 84,
+    "deletions": 18,
+    "lines_in_file": 5390,
+    "filesize": 163025,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5575",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 771
+      },
+      {
+        "filename": "cmd/restic/cmd_backup_integration_test.go",
+        "additions": 19,
+        "deletions": 2,
+        "lines_in_file": 749,
+        "filesize": 23778
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 3,
+        "deletions": 9,
+        "lines_in_file": 796,
+        "filesize": 35976
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 32,
+        "deletions": 6,
+        "lines_in_file": 993,
+        "filesize": 29174
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 2585,
+        "filesize": 67342
+      },
+      {
+        "filename": "internal/backend/local/local_windows.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 31,
+        "filesize": 707
+      },
+      {
+        "filename": "internal/data/tree.go",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 222,
+        "filesize": 5277
+      }
+    ]
   },
   {
     "pr_number": 5616,
     "title": "Backup from s3",
     "author": "BataevDaniil",
     "number_commits": 9,
+    "create_date": "2025-11-24T12:14:55Z",
+    "additions": 340,
+    "deletions": 0,
+    "lines_in_file": 1039,
+    "filesize": 29658,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "internal/fs/fs_s3.go"
-    ],
-    "create_date": "2025-11-24T12:14:55Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 35,
+        "deletions": 0,
+        "lines_in_file": 734,
+        "filesize": 22165
+      },
+      {
+        "filename": "internal/fs/fs_s3.go",
+        "additions": 305,
+        "deletions": 0,
+        "lines_in_file": 305,
+        "filesize": 7493
+      }
+    ]
   },
   {
     "pr_number": 5607,
@@ -362,14 +1018,42 @@
     "title": "Work around broken Readdirnames",
     "author": "vasi",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/pull-5607",
-      "internal/backend/local/local.go",
-      "internal/backend/local/local_linux.go",
-      "internal/backend/local/local_nonlinux.go"
-    ],
     "create_date": "2025-11-18T00:06:56Z",
-    "changelog": "+Bugfix: Work around FUSE readdir bug on Linux\n+\n+Restic used to use the Go standard library Readdirnames() function, which ignored files with a zero inode. With certain versions of FUSE, this caused `restic check` to fail on some FUSE filesystems, being unable to find some pack files. This applied particularly to usage of Restic by Deja Dup.\n+\n+Now, we use our own readdirnames() implementation that doesn't ignore any files, and `restic check` should succeed even with buggy versions of FUSE.\n+\n+https://github.com/restic/restic/pull/5607"
+    "changelog": "Bugfix: Work around FUSE readdir bug on Linux",
+    "additions": 65,
+    "deletions": 1,
+    "lines_in_file": 435,
+    "filesize": 10986,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5607",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 536
+      },
+      {
+        "filename": "internal/backend/local/local.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 371,
+        "filesize": 9331
+      },
+      {
+        "filename": "internal/backend/local/local_linux.go",
+        "additions": 47,
+        "deletions": 0,
+        "lines_in_file": 47,
+        "filesize": 976
+      },
+      {
+        "filename": "internal/backend/local/local_nonlinux.go",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 143
+      }
+    ]
   },
   {
     "pr_number": 5593,
@@ -377,35 +1061,189 @@
     "title": "PR for Mounting on Windows",
     "author": "kikoqiu",
     "number_commits": 5,
-    "filelist": [
-      "changelog/unreleased/pull-5593",
-      "cmd/restic/cmd_mount.go",
-      "cmd/restic/cmd_mount_disabled.go",
-      "cmd/restic/cmd_mount_unix.go",
-      "cmd/restic/cmd_mount_windows.go",
-      "cmd/restic/cmd_webdav.go",
-      "cmd/restic/main.go",
-      "doc/050_restore.rst",
-      "go.mod",
-      "go.sum",
-      "internal/fuse/bridge_unix.go",
-      "internal/fuse/bridge_webdav.go",
-      "internal/fuse/bridge_windows.go",
-      "internal/fuse/dir.go",
-      "internal/fuse/file.go",
-      "internal/fuse/fuse_test.go",
-      "internal/fuse/inode.go",
-      "internal/fuse/link.go",
-      "internal/fuse/other.go",
-      "internal/fuse/root.go",
-      "internal/fuse/snapshots_dir.go",
-      "internal/fuse/snapshots_dirstruct.go",
-      "internal/fuse/tree_cache.go",
-      "internal/fuse/types.go",
-      "internal/fuse/xattr.go"
-    ],
     "create_date": "2025-11-15T09:05:19Z",
-    "changelog": "+Enhancement: Support mount on Windows and add a new `webdav` command\n+\n+The `mount` command now works on Windows. And a new `webdav` command is added\n+to mount the backups as a webdav server.\n+\n+https://github.com/restic/restic/pull/5593"
+    "changelog": "Enhancement: Support mount on Windows and add a new `webdav` command",
+    "additions": 1846,
+    "deletions": 237,
+    "lines_in_file": 4427,
+    "filesize": 146229,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5593",
+        "additions": 6,
+        "deletions": 0,
+        "lines_in_file": 6,
+        "filesize": 233
+      },
+      {
+        "filename": "cmd/restic/cmd_mount.go",
+        "additions": 5,
+        "deletions": 102,
+        "lines_in_file": 120,
+        "filesize": 3827
+      },
+      {
+        "filename": "cmd/restic/cmd_mount_disabled.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 13,
+        "filesize": 310
+      },
+      {
+        "filename": "cmd/restic/cmd_mount_unix.go",
+        "additions": 119,
+        "deletions": 0,
+        "lines_in_file": 119,
+        "filesize": 2890
+      },
+      {
+        "filename": "cmd/restic/cmd_mount_windows.go",
+        "additions": 116,
+        "deletions": 0,
+        "lines_in_file": 116,
+        "filesize": 3323
+      },
+      {
+        "filename": "cmd/restic/cmd_webdav.go",
+        "additions": 151,
+        "deletions": 0,
+        "lines_in_file": 151,
+        "filesize": 4428
+      },
+      {
+        "filename": "cmd/restic/main.go",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 242,
+        "filesize": 6463
+      },
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 283,
+        "filesize": 12578
+      },
+      {
+        "filename": "go.mod",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 107,
+        "filesize": 4903
+      },
+      {
+        "filename": "go.sum",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 334,
+        "filesize": 31662
+      },
+      {
+        "filename": "internal/fuse/bridge_unix.go",
+        "additions": 217,
+        "deletions": 0,
+        "lines_in_file": 217,
+        "filesize": 5419
+      },
+      {
+        "filename": "internal/fuse/bridge_webdav.go",
+        "additions": 275,
+        "deletions": 0,
+        "lines_in_file": 275,
+        "filesize": 6490
+      },
+      {
+        "filename": "internal/fuse/bridge_windows.go",
+        "additions": 598,
+        "deletions": 0,
+        "lines_in_file": 598,
+        "filesize": 18366
+      },
+      {
+        "filename": "internal/fuse/dir.go",
+        "additions": 26,
+        "deletions": 26,
+        "lines_in_file": 255,
+        "filesize": 5853
+      },
+      {
+        "filename": "internal/fuse/file.go",
+        "additions": 12,
+        "deletions": 15,
+        "lines_in_file": 179,
+        "filesize": 4559
+      },
+      {
+        "filename": "internal/fuse/fuse_test.go",
+        "additions": 21,
+        "deletions": 24,
+        "lines_in_file": 348,
+        "filesize": 9610
+      },
+      {
+        "filename": "internal/fuse/inode.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 46,
+        "filesize": 1299
+      },
+      {
+        "filename": "internal/fuse/link.go",
+        "additions": 10,
+        "deletions": 12,
+        "lines_in_file": 63,
+        "filesize": 1456
+      },
+      {
+        "filename": "internal/fuse/other.go",
+        "additions": 6,
+        "deletions": 8,
+        "lines_in_file": 50,
+        "filesize": 1020
+      },
+      {
+        "filename": "internal/fuse/root.go",
+        "additions": 6,
+        "deletions": 8,
+        "lines_in_file": 77,
+        "filesize": 1721
+      },
+      {
+        "filename": "internal/fuse/snapshots_dir.go",
+        "additions": 19,
+        "deletions": 22,
+        "lines_in_file": 173,
+        "filesize": 4236
+      },
+      {
+        "filename": "internal/fuse/snapshots_dirstruct.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 350,
+        "filesize": 8140
+      },
+      {
+        "filename": "internal/fuse/tree_cache.go",
+        "additions": 5,
+        "deletions": 7,
+        "lines_in_file": 43,
+        "filesize": 674
+      },
+      {
+        "filename": "internal/fuse/types.go",
+        "additions": 234,
+        "deletions": 0,
+        "lines_in_file": 234,
+        "filesize": 6048
+      },
+      {
+        "filename": "internal/fuse/xattr.go",
+        "additions": 7,
+        "deletions": 6,
+        "lines_in_file": 28,
+        "filesize": 721
+      }
+    ]
   },
   {
     "pr_number": 5570,
@@ -413,12 +1251,28 @@
     "title": "backends: configurable maxElapsedTime for retry operations",
     "author": "devonhk",
     "number_commits": 2,
-    "filelist": [
-      "changelog/unreleased/issue-5571",
-      "internal/global/global.go"
-    ],
     "create_date": "2025-10-25T16:49:30Z",
-    "changelog": "+Enhancement: Configurable retry timeout\n+\n+Restic's retry operations used a hardcoded timeout of 15 minutes,\n+forcing users to wait the full duration when backends were down or misconfigured.\n+\n+Restic now allows setting the retry timeout via the --retry-max-elapsed-time flag.\n+This permits commands like `restic cat config` to fail quickly when backends are unreachable.\n+\n+https://github.com/restic/restic/issues/5571"
+    "changelog": "Enhancement: Configurable retry timeout",
+    "additions": 30,
+    "deletions": 18,
+    "lines_in_file": 624,
+    "filesize": 21224,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5571",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 413
+      },
+      {
+        "filename": "internal/global/global.go",
+        "additions": 21,
+        "deletions": 18,
+        "lines_in_file": 615,
+        "filesize": 20811
+      }
+    ]
   },
   {
     "pr_number": 5529,
@@ -427,23 +1281,105 @@
     "author": "dgkmd",
     "number_commits": 12,
     "number_comments": 3,
-    "filelist": [
-      "changelog/unreleased/issue-5473",
-      "cmd/restic/cmd_rechunk_copy.go",
-      "cmd/restic/cmd_rechunk_copy_integration_test.go",
-      "cmd/restic/main.go",
-      "doc/045_working_with_repos.rst",
-      "internal/feature/registry.go",
-      "internal/rechunker/blob_cache.go",
-      "internal/rechunker/debug.go",
-      "internal/rechunker/dispatcher.go",
-      "internal/rechunker/progress.go",
-      "internal/rechunker/rechunker.go",
-      "internal/rechunker/rechunker_test.go",
-      "internal/rechunker/worker.go"
-    ],
     "create_date": "2025-09-25T07:15:24Z",
-    "changelog": "+Enhancement: Add rechunk-copy feature\n+\n+Restic didn't rechunk data blobs when copying snapshots between repositories\n+with different chunker parameters. Instead, it copied the blobs as-is,\n+which impaired deduplication powered by [Content Defined Chunking](https://restic.net/blog/2015-09-12/restic-foundation1-cdc/). \n+To mitigate this issue, users had to manually restore the snapshots somewhere,\n+and then backup them again to the new repository. This workaround was \n+inefficient, prone to tamper with the original metadata, and bothersome.\n+\n+It now supports `rechunk-copy` command, in which the data are rechunked while copying.\n+Currently, it does not automatically skip previously copied snapshots. Also,\n+it does not remember which files had been rechunked in previous runs, so it will\n+try to rework on every file again in the next run (though it would not add new\n+data blobs to the repository in that case; this is what deduplication is for).\n+Therefore, `rechunk-copy` is adequate for one-time migration between repositories.\n+For incremental copy scenarios, `copy` between repositories with same chunker \n+parameters is recommended.\n+\n+`rechunk-copy` shares the same command interface with `copy`, with an exception\n+that `rechunk-copy` additionally supports a `--rechunk-tag` option to add a\n+tag to all rechunk-copied snapshots in the destination repository.\n+\n+https://github.com/restic/restic/issues/5473\n+https://forum.restic.net/t/is-it-possible-to-re-chunk-after-a-restic-copy/6072\n+https://forum.restic.net/t/copy-snapshots-between-repositories-without-copy-chunker-params/7320"
+    "changelog": "Enhancement: Add rechunk-copy feature",
+    "additions": 2422,
+    "deletions": 4,
+    "lines_in_file": 3248,
+    "filesize": 97762,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5473",
+        "additions": 25,
+        "deletions": 0,
+        "lines_in_file": 25,
+        "filesize": 1577
+      },
+      {
+        "filename": "cmd/restic/cmd_rechunk_copy.go",
+        "additions": 228,
+        "deletions": 0,
+        "lines_in_file": 228,
+        "filesize": 7992
+      },
+      {
+        "filename": "cmd/restic/cmd_rechunk_copy_integration_test.go",
+        "additions": 124,
+        "deletions": 0,
+        "lines_in_file": 124,
+        "filesize": 3964
+      },
+      {
+        "filename": "cmd/restic/main.go",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 242,
+        "filesize": 6460
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 34,
+        "deletions": 4,
+        "lines_in_file": 592,
+        "filesize": 26833
+      },
+      {
+        "filename": "internal/feature/registry.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 29,
+        "filesize": 2077
+      },
+      {
+        "filename": "internal/rechunker/blob_cache.go",
+        "additions": 341,
+        "deletions": 0,
+        "lines_in_file": 341,
+        "filesize": 8594
+      },
+      {
+        "filename": "internal/rechunker/debug.go",
+        "additions": 103,
+        "deletions": 0,
+        "lines_in_file": 103,
+        "filesize": 1899
+      },
+      {
+        "filename": "internal/rechunker/dispatcher.go",
+        "additions": 211,
+        "deletions": 0,
+        "lines_in_file": 211,
+        "filesize": 4530
+      },
+      {
+        "filename": "internal/rechunker/progress.go",
+        "additions": 95,
+        "deletions": 0,
+        "lines_in_file": 95,
+        "filesize": 2158
+      },
+      {
+        "filename": "internal/rechunker/rechunker.go",
+        "additions": 599,
+        "deletions": 0,
+        "lines_in_file": 599,
+        "filesize": 15393
+      },
+      {
+        "filename": "internal/rechunker/rechunker_test.go",
+        "additions": 433,
+        "deletions": 0,
+        "lines_in_file": 433,
+        "filesize": 11404
+      },
+      {
+        "filename": "internal/rechunker/worker.go",
+        "additions": 226,
+        "deletions": 0,
+        "lines_in_file": 226,
+        "filesize": 4881
+      }
+    ]
   },
   {
     "pr_number": 5504,
@@ -451,20 +1387,40 @@
     "author": "JL710",
     "number_commits": 3,
     "number_comments": 17,
+    "create_date": "2025-09-11T14:13:01Z",
+    "additions": 45,
+    "deletions": 0,
+    "lines_in_file": 400,
+    "filesize": 14501,
     "filelist": [
-      "doc/080_examples.rst"
-    ],
-    "create_date": "2025-09-11T14:13:01Z"
+      {
+        "filename": "doc/080_examples.rst",
+        "additions": 45,
+        "deletions": 0,
+        "lines_in_file": 400,
+        "filesize": 14501
+      }
+    ]
   },
   {
     "pr_number": 5470,
     "title": "Add and describe more chunking options in design document",
     "author": "aawsome",
     "number_commits": 1,
+    "create_date": "2025-08-08T18:49:33Z",
+    "additions": 30,
+    "deletions": 10,
+    "lines_in_file": 854,
+    "filesize": 37987,
     "filelist": [
-      "doc/design.rst"
-    ],
-    "create_date": "2025-08-08T18:49:33Z"
+      {
+        "filename": "doc/design.rst",
+        "additions": 30,
+        "deletions": 10,
+        "lines_in_file": 854,
+        "filesize": 37987
+      }
+    ]
   },
   {
     "pr_number": 5410,
@@ -472,12 +1428,34 @@
     "author": "greatroar",
     "number_commits": 2,
     "number_comments": 2,
+    "create_date": "2025-06-03T13:13:02Z",
+    "additions": 104,
+    "deletions": 14,
+    "lines_in_file": 941,
+    "filesize": 25435,
     "filelist": [
-      "internal/repository/pack/pack.go",
-      "internal/repository/pack/pack_internal_test.go",
-      "internal/repository/pack/pack_test.go"
-    ],
-    "create_date": "2025-06-03T13:13:02Z"
+      {
+        "filename": "internal/repository/pack/pack.go",
+        "additions": 51,
+        "deletions": 7,
+        "lines_in_file": 477,
+        "filesize": 13385
+      },
+      {
+        "filename": "internal/repository/pack/pack_internal_test.go",
+        "additions": 44,
+        "deletions": 0,
+        "lines_in_file": 281,
+        "filesize": 7435
+      },
+      {
+        "filename": "internal/repository/pack/pack_test.go",
+        "additions": 9,
+        "deletions": 7,
+        "lines_in_file": 183,
+        "filesize": 4615
+      }
+    ]
   },
   {
     "pr_number": 5396,
@@ -485,26 +1463,76 @@
     "title": "restic packfilelist - create lists of packfile in plain text or JSON format. Issue #5372",
     "author": "wplapper",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5372",
-      "cmd/restic/cmd_restore.go",
-      "cmd/restic/cmd_restore_integration_test.go",
-      "cmd/restic/packfiles_from_snapshots.go",
-      "doc/045_working_with_repos.rst"
-    ],
     "create_date": "2025-05-25T06:37:33Z",
-    "changelog": "+Enhancement: command to list packfiles belonging to a snapshot\n+\n+This enhancement creates a new option `packfiles` for command `restore`. It shows the\n+packfiles which are related to a snapshot or a set of snapshots. Output is either\n+plain text or JSON. Different levels of details can be activated.\n+\n+https://github.com/restic/restic/issues/5372\n+https://github.com/restic/restic/pull/5396"
+    "changelog": "Enhancement: command to list packfiles belonging to a snapshot",
+    "additions": 312,
+    "deletions": 1,
+    "lines_in_file": 1594,
+    "filesize": 56193,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5372",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 8,
+        "filesize": 387
+      },
+      {
+        "filename": "cmd/restic/cmd_restore.go",
+        "additions": 30,
+        "deletions": 0,
+        "lines_in_file": 341,
+        "filesize": 10304
+      },
+      {
+        "filename": "cmd/restic/cmd_restore_integration_test.go",
+        "additions": 81,
+        "deletions": 0,
+        "lines_in_file": 498,
+        "filesize": 15668
+      },
+      {
+        "filename": "cmd/restic/packfiles_from_snapshots.go",
+        "additions": 147,
+        "deletions": 0,
+        "lines_in_file": 147,
+        "filesize": 4025
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 46,
+        "deletions": 1,
+        "lines_in_file": 600,
+        "filesize": 25809
+      }
+    ]
   },
   {
     "pr_number": 5390,
     "title": "Implement `backup --add-auto-tags` flag",
     "author": "jtru",
     "number_commits": 1,
+    "create_date": "2025-05-11T11:25:17Z",
+    "additions": 16,
+    "deletions": 0,
+    "lines_in_file": 1671,
+    "filesize": 49635,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "internal/archiver/archiver.go"
-    ],
-    "create_date": "2025-05-11T11:25:17Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 699,
+        "filesize": 21137
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 972,
+        "filesize": 28498
+      }
+    ]
   },
   {
     "pr_number": 5375,
@@ -513,30 +1541,154 @@
     "author": "Laborratte5",
     "number_commits": 36,
     "number_comments": 36,
-    "filelist": [
-      "changelog/unreleased/issue-2376",
-      "cmd/restic/cmd_backup.go",
-      "cmd/restic/cmd_backup_integration_test.go",
-      "cmd/restic/cmd_recover.go",
-      "cmd/restic/cmd_repair_snapshots.go",
-      "cmd/restic/cmd_rewrite.go",
-      "cmd/restic/cmd_rewrite_integration_test.go",
-      "cmd/restic/cmd_rewrite_test.go",
-      "cmd/restic/cmd_snapshots.go",
-      "doc/040_backup.rst",
-      "doc/045_working_with_repos.rst",
-      "doc/design.rst",
-      "internal/archiver/archiver.go",
-      "internal/checker/checker_test.go",
-      "internal/data/snapshot.go",
-      "internal/data/snapshot_test.go",
-      "internal/data/testing.go",
-      "internal/restorer/restorer_test.go",
-      "internal/ui/table/table.go",
-      "internal/ui/table/table_test.go"
-    ],
     "create_date": "2025-04-29T11:05:49Z",
-    "changelog": "+Enhancement: Add per snapshot description\n+\n+Restic can now store user supplied descriptions for snapshots.\n+When creating a new snapshot the description can be supplied\n+using `restic backup --description <description>` or\n+`restic backup --description-file <filepath>`.\n+\n+`restic snapshots` shows the snapshots description.\n+\n+`restic rewrite [--description <description> | --description-file <filepath>] <snapshot id>`\n+is used to change the description of existing snapshots.\n+\n+To remove a description use `restic rewrite --remove-description <snapshot id>`.\n+\n+https://github.com/restic/restic/issues/2376\n+https://github.com/restic/restic/pull/5375"
+    "changelog": "Enhancement: Add per snapshot description",
+    "additions": 423,
+    "deletions": 82,
+    "lines_in_file": 9354,
+    "filesize": 301112,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-2376",
+        "additions": 16,
+        "deletions": 0,
+        "lines_in_file": 16,
+        "filesize": 642
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 56,
+        "deletions": 26,
+        "lines_in_file": 729,
+        "filesize": 22258
+      },
+      {
+        "filename": "cmd/restic/cmd_backup_integration_test.go",
+        "additions": 35,
+        "deletions": 0,
+        "lines_in_file": 767,
+        "filesize": 24094
+      },
+      {
+        "filename": "cmd/restic/cmd_recover.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 187,
+        "filesize": 4794
+      },
+      {
+        "filename": "cmd/restic/cmd_repair_snapshots.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 181,
+        "filesize": 5471
+      },
+      {
+        "filename": "cmd/restic/cmd_rewrite.go",
+        "additions": 86,
+        "deletions": 7,
+        "lines_in_file": 429,
+        "filesize": 12871
+      },
+      {
+        "filename": "cmd/restic/cmd_rewrite_integration_test.go",
+        "additions": 59,
+        "deletions": 12,
+        "lines_in_file": 244,
+        "filesize": 8795
+      },
+      {
+        "filename": "cmd/restic/cmd_rewrite_test.go",
+        "additions": 42,
+        "deletions": 0,
+        "lines_in_file": 42,
+        "filesize": 1162
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots.go",
+        "additions": 22,
+        "deletions": 7,
+        "lines_in_file": 386,
+        "filesize": 10104
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 816,
+        "filesize": 36745
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 28,
+        "deletions": 15,
+        "lines_in_file": 575,
+        "filesize": 25459
+      },
+      {
+        "filename": "doc/design.rst",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 836,
+        "filesize": 36914
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 2,
+        "deletions": 1,
+        "lines_in_file": 952,
+        "filesize": 27897
+      },
+      {
+        "filename": "internal/checker/checker_test.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 689,
+        "filesize": 18031
+      },
+      {
+        "filename": "internal/data/snapshot.go",
+        "additions": 7,
+        "deletions": 5,
+        "lines_in_file": 270,
+        "filesize": 7232
+      },
+      {
+        "filename": "internal/data/snapshot_test.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 51,
+        "filesize": 1161
+      },
+      {
+        "filename": "internal/data/testing.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 190,
+        "filesize": 4743
+      },
+      {
+        "filename": "internal/restorer/restorer_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 1563,
+        "filesize": 42569
+      },
+      {
+        "filename": "internal/ui/table/table.go",
+        "additions": 17,
+        "deletions": 0,
+        "lines_in_file": 226,
+        "filesize": 4726
+      },
+      {
+        "filename": "internal/ui/table/table_test.go",
+        "additions": 28,
+        "deletions": 0,
+        "lines_in_file": 205,
+        "filesize": 5444
+      }
+    ]
   },
   {
     "pr_number": 5366,
@@ -544,23 +1696,105 @@
     "title": "dump: add progress reporting (text/json)",
     "author": "konidev20",
     "number_commits": 2,
-    "filelist": [
-      "changelog/unreleased/issue-5309",
-      "cmd/restic/cmd_dump.go",
-      "cmd/restic/cmd_dump_integration_test.go",
-      "doc/manual_rest.rst",
-      "internal/dump/common.go",
-      "internal/dump/tar.go",
-      "internal/dump/zip.go",
-      "internal/ui/dump/json.go",
-      "internal/ui/dump/json_test.go",
-      "internal/ui/dump/progress.go",
-      "internal/ui/dump/progress_test.go",
-      "internal/ui/dump/text.go",
-      "internal/ui/dump/text_test.go"
-    ],
     "create_date": "2025-04-19T19:18:15Z",
-    "changelog": "+Enhancement: Add progress reporting for `dump` command\n+\n+Restic now reports progress for the `dump` command when the `--target` flag\n+is specified. Progress reporting is also available with the `--json` flag.\n+At the end of the `dump` command, a summary of the progress is reported.\n+\n+https://github.com/restic/restic/issues/5309\n+https://github.com/restic/restic/pull/5366\n\\ No newline at end of file"
+    "changelog": "Enhancement: Add progress reporting for `dump` command",
+    "additions": 991,
+    "deletions": 6,
+    "lines_in_file": 2019,
+    "filesize": 66443,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5309",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 8,
+        "filesize": 368
+      },
+      {
+        "filename": "cmd/restic/cmd_dump.go",
+        "additions": 16,
+        "deletions": 0,
+        "lines_in_file": 227,
+        "filesize": 6756
+      },
+      {
+        "filename": "cmd/restic/cmd_dump_integration_test.go",
+        "additions": 360,
+        "deletions": 0,
+        "lines_in_file": 360,
+        "filesize": 11425
+      },
+      {
+        "filename": "doc/manual_rest.rst",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 472,
+        "filesize": 23522
+      },
+      {
+        "filename": "internal/dump/common.go",
+        "additions": 26,
+        "deletions": 5,
+        "lines_in_file": 175,
+        "filesize": 4057
+      },
+      {
+        "filename": "internal/dump/tar.go",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 142,
+        "filesize": 3316
+      },
+      {
+        "filename": "internal/dump/zip.go",
+        "additions": 18,
+        "deletions": 0,
+        "lines_in_file": 82,
+        "filesize": 1723
+      },
+      {
+        "filename": "internal/ui/dump/json.go",
+        "additions": 118,
+        "deletions": 0,
+        "lines_in_file": 118,
+        "filesize": 3108
+      },
+      {
+        "filename": "internal/ui/dump/json_test.go",
+        "additions": 50,
+        "deletions": 0,
+        "lines_in_file": 50,
+        "filesize": 1997
+      },
+      {
+        "filename": "internal/ui/dump/progress.go",
+        "additions": 109,
+        "deletions": 0,
+        "lines_in_file": 109,
+        "filesize": 2343
+      },
+      {
+        "filename": "internal/ui/dump/progress_test.go",
+        "additions": 171,
+        "deletions": 0,
+        "lines_in_file": 171,
+        "filesize": 4742
+      },
+      {
+        "filename": "internal/ui/dump/text.go",
+        "additions": 55,
+        "deletions": 0,
+        "lines_in_file": 55,
+        "filesize": 1575
+      },
+      {
+        "filename": "internal/ui/dump/text_test.go",
+        "additions": 50,
+        "deletions": 0,
+        "lines_in_file": 50,
+        "filesize": 1511
+      }
+    ]
   },
   {
     "pr_number": 5364,
@@ -569,38 +1803,160 @@
     "author": "konidev20",
     "number_commits": 4,
     "number_comments": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5157",
-      "cmd/restic/cmd_forget.go",
-      "doc/060_forget.rst",
-      "internal/data/snapshot_policy.go"
-    ],
     "create_date": "2025-04-19T15:16:57Z",
-    "changelog": "+Enhancement: Added `--keep-unique` flag to `forget` command\n+\n+Restic `forget` command can now remove duplicate snapshots with the\n+`--keep-unique` flag set.\n+\n+https://github.com/restic/restic/issues/5157\n+https://github.com/restic/restic/pull/5364\n\\ No newline at end of file"
+    "changelog": "Enhancement: Added `--keep-unique` flag to `forget` command",
+    "additions": 33,
+    "deletions": 0,
+    "lines_in_file": 1250,
+    "filesize": 47310,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5157",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 243
+      },
+      {
+        "filename": "cmd/restic/cmd_forget.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 407,
+        "filesize": 13128
+      },
+      {
+        "filename": "doc/060_forget.rst",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 504,
+        "filesize": 24636
+      },
+      {
+        "filename": "internal/data/snapshot_policy.go",
+        "additions": 22,
+        "deletions": 0,
+        "lines_in_file": 332,
+        "filesize": 9303
+      }
+    ]
   },
   {
     "pr_number": 5362,
     "title": "Enhanced snapshot summary",
     "author": "jtru",
     "number_commits": 3,
+    "create_date": "2025-04-17T16:41:09Z",
+    "additions": 114,
+    "deletions": 92,
+    "lines_in_file": 5886,
+    "filesize": 178621,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "cmd/restic/cmd_backup_integration_test.go",
-      "cmd/restic/cmd_forget.go",
-      "cmd/restic/cmd_forget_test.go",
-      "cmd/restic/cmd_mount.go",
-      "cmd/restic/cmd_prune_integration_test.go",
-      "cmd/restic/global.go",
-      "cmd/restic/main.go",
-      "internal/archiver/archiver.go",
-      "internal/backend/b2/b2.go",
-      "internal/backend/backend.go",
-      "internal/repository/prune.go",
-      "internal/restic/repository.go",
-      "internal/restic/restic_error_codes.go",
-      "internal/restic/snapshot.go"
-    ],
-    "create_date": "2025-04-17T16:41:09Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 1,
+        "deletions": 4,
+        "lines_in_file": 693,
+        "filesize": 20759
+      },
+      {
+        "filename": "cmd/restic/cmd_backup_integration_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 725,
+        "filesize": 22386
+      },
+      {
+        "filename": "cmd/restic/cmd_forget.go",
+        "additions": 2,
+        "deletions": 5,
+        "lines_in_file": 401,
+        "filesize": 12673
+      },
+      {
+        "filename": "cmd/restic/cmd_forget_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 102,
+        "filesize": 4019
+      },
+      {
+        "filename": "cmd/restic/cmd_mount.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 213,
+        "filesize": 5866
+      },
+      {
+        "filename": "cmd/restic/cmd_prune_integration_test.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 267,
+        "filesize": 9007
+      },
+      {
+        "filename": "cmd/restic/global.go",
+        "additions": 4,
+        "deletions": 8,
+        "lines_in_file": 698,
+        "filesize": 22044
+      },
+      {
+        "filename": "cmd/restic/main.go",
+        "additions": 4,
+        "deletions": 26,
+        "lines_in_file": 205,
+        "filesize": 4851
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 25,
+        "deletions": 16,
+        "lines_in_file": 968,
+        "filesize": 28414
+      },
+      {
+        "filename": "internal/backend/b2/b2.go",
+        "additions": 2,
+        "deletions": 1,
+        "lines_in_file": 342,
+        "filesize": 9300
+      },
+      {
+        "filename": "internal/backend/backend.go",
+        "additions": 0,
+        "deletions": 3,
+        "lines_in_file": 140,
+        "filesize": 4416
+      },
+      {
+        "filename": "internal/repository/prune.go",
+        "additions": 4,
+        "deletions": 8,
+        "lines_in_file": 644,
+        "filesize": 20326
+      },
+      {
+        "filename": "internal/restic/repository.go",
+        "additions": 0,
+        "deletions": 4,
+        "lines_in_file": 166,
+        "filesize": 6052
+      },
+      {
+        "filename": "internal/restic/restic_error_codes.go",
+        "additions": 54,
+        "deletions": 0,
+        "lines_in_file": 54,
+        "filesize": 1489
+      },
+      {
+        "filename": "internal/restic/snapshot.go",
+        "additions": 13,
+        "deletions": 12,
+        "lines_in_file": 268,
+        "filesize": 7019
+      }
+    ]
   },
   {
     "pr_number": 5359,
@@ -608,14 +1964,42 @@
     "title": "git prune - prune more aggresively - issue 5293",
     "author": "wplapper",
     "number_commits": 4,
-    "filelist": [
-      "changelog/unreleased/issue-5293",
-      "cmd/restic/cmd_prune.go",
-      "internal/repository/prune.go",
-      "internal/repository/prune_test.go"
-    ],
     "create_date": "2025-04-15T07:22:01Z",
-    "changelog": "+Enhancement: prune small packfiles more aggressively\n+\n+prune reads all packfiles and their sizes, sorts them by ascending size order.\n+It picks the first percentile value from the sorted list of packfile sizes and\n+applies the scale factor of 80% to it and uses it for its prune decisions.\n+\n+As a consequence, the option `--repack-small` is not longer needed and has been\n+marked as deprecated.\n+\n+https://github.com/restic/restic/issues/5293\n+https://github.com/restic/restic/pull/5183\n+https://github.com/restic/restic/pull/5359"
+    "changelog": "Enhancement: prune small packfiles more aggressively",
+    "additions": 167,
+    "deletions": 29,
+    "lines_in_file": 1292,
+    "filesize": 42429,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5293",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 12,
+        "filesize": 522
+      },
+      {
+        "filename": "cmd/restic/cmd_prune.go",
+        "additions": 21,
+        "deletions": 2,
+        "lines_in_file": 327,
+        "filesize": 11518
+      },
+      {
+        "filename": "internal/repository/prune.go",
+        "additions": 49,
+        "deletions": 14,
+        "lines_in_file": 683,
+        "filesize": 21651
+      },
+      {
+        "filename": "internal/repository/prune_test.go",
+        "additions": 85,
+        "deletions": 13,
+        "lines_in_file": 270,
+        "filesize": 8738
+      }
+    ]
   },
   {
     "pr_number": 5351,
@@ -623,18 +2007,70 @@
     "title": "Enhancement: restic snapshot filters based on time",
     "author": "wplapper",
     "number_commits": 9,
-    "filelist": [
-      "changelog/unreleased/issue-5193",
-      "cmd/restic/cmd_snapshots_integration_test.go",
-      "cmd/restic/find.go",
-      "doc/045_working_with_repos.rst",
-      "internal/data/duration_time.go",
-      "internal/data/duration_time_test.go",
-      "internal/data/snapshot_find.go",
-      "internal/data/snapshot_find_test.go"
-    ],
     "create_date": "2025-04-10T06:34:29Z",
-    "changelog": "+Enhancement: Add snapshot filtering options `--newer-than` and `--older-than`\n+\n+You can now use time based filters in all command which use a restic.SnaspshotFilter.\n+\n+There are different means of specifying a time based filter option.\n+* `--newer-than` and `--older-than` can be used to specify a date or a date time\n+* `--newer-than` and `--older-than` can be used to specify a snap ID, meaning the\n+time of when the snapshot was taken.\n+* `--newer-than` and `--older-than` can be a relative time distance,\n+  a `restic.Duration` in the form '<y>y<m>m<d>d<h>h', used extensively in\n+  `restic forget` policies.\n+\n+In order to relate to a restic.Duration, you need to specify a time reference,\n+using the option `--relative-to`. When no explicit time reference is given,\n+`--relative-to latest` is used for defining the time reference.\n+\n+All of these options can have one of the following values:\n+* the string `now`, reference to the current time.\n+* a timestring, according to `time.DateTime`: 'yyyy-m-d H:M:S', or just the date\n+  part 'yyyy-m-d', implying midnight as the time part. There is no need of specifying\n+  a leading '0' in any of 'm', 'd', 'H', 'M' or 'S'.\n+* a `restic.Duration` in the form '<y>y<m>m<d>d<h>h', the order of 'y', 'm', 'd' and\n+  'h' does not matter.\n+* a valid snapshot ID, including the string `latest`.\n+\n+The testing for time boundaries is implemented in such a way that the boundary value is\n+included in the test, despite the names `--newer-than` and `--older-than`.\n+Therefore `--newer-than <snapID>` will include `snapID` in its result list if the\n+rest of the filter options will permit it.\n+\n+You can filter a snapshot range by both specifying `--older-time` and `--newer-time`:\n+\n+use `restic -r ... snapshots --older-time '2024-6-1' --newer-time '2024-06-30 23:59:59'`\n+to list all snapshots in the month of June 2024.\n+\n+https://github.com/restic/restic/issues/2078 // More options for \"restic tag\"\n+https://github.com/restic/restic/issues/5136 // Ability to filter snapshots by date\n+https://github.com/restic/restic/issues/5193 // Allow forget to relate policy to current time and not just latest snapshot\n+https://github.com/restic/restic/pull/5209   // Add snapshot filtering --older-time and --newer-time\n+https://github.com/restic/restic/pull/5351   // Snapshot filters based on time"
+    "changelog": "Enhancement: Add snapshot filtering options `--newer-than` and `--older-than`",
+    "additions": 755,
+    "deletions": 2,
+    "lines_in_file": 1746,
+    "filesize": 66396,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5193",
+        "additions": 40,
+        "deletions": 0,
+        "lines_in_file": 40,
+        "filesize": 2299
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots_integration_test.go",
+        "additions": 180,
+        "deletions": 0,
+        "lines_in_file": 247,
+        "filesize": 9038
+      },
+      {
+        "filename": "cmd/restic/find.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 82,
+        "filesize": 4063
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 87,
+        "deletions": 0,
+        "lines_in_file": 649,
+        "filesize": 29350
+      },
+      {
+        "filename": "internal/data/duration_time.go",
+        "additions": 118,
+        "deletions": 0,
+        "lines_in_file": 118,
+        "filesize": 3272
+      },
+      {
+        "filename": "internal/data/duration_time_test.go",
+        "additions": 93,
+        "deletions": 0,
+        "lines_in_file": 93,
+        "filesize": 2544
+      },
+      {
+        "filename": "internal/data/snapshot_find.go",
+        "additions": 148,
+        "deletions": 2,
+        "lines_in_file": 340,
+        "filesize": 10213
+      },
+      {
+        "filename": "internal/data/snapshot_find_test.go",
+        "additions": 86,
+        "deletions": 0,
+        "lines_in_file": 177,
+        "filesize": 5617
+      }
+    ]
   },
   {
     "pr_number": 5348,
@@ -642,12 +2078,28 @@
     "title": "mount: prevent mounting over repository",
     "author": "konidev20",
     "number_commits": 2,
-    "filelist": [
-      "changelog/unreleased/issue-5234",
-      "cmd/restic/cmd_mount.go"
-    ],
     "create_date": "2025-04-06T09:21:31Z",
-    "changelog": "+Bugfix: Prevent mounting over repository\n+\n+Restic `mount` command now checks if the mount point is the repository and\n+will not allow it.\n+\n+https://github.com/restic/restic/issues/5234\n\\ No newline at end of file"
+    "changelog": "Bugfix: Prevent mounting over repository",
+    "additions": 34,
+    "deletions": 0,
+    "lines_in_file": 247,
+    "filesize": 6629,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5234",
+        "additions": 6,
+        "deletions": 0,
+        "lines_in_file": 6,
+        "filesize": 181
+      },
+      {
+        "filename": "cmd/restic/cmd_mount.go",
+        "additions": 28,
+        "deletions": 0,
+        "lines_in_file": 241,
+        "filesize": 6448
+      }
+    ]
   },
   {
     "pr_number": 5346,
@@ -656,12 +2108,28 @@
     "author": "wplapper",
     "number_commits": 2,
     "number_comments": 12,
-    "filelist": [
-      "changelog/unreleased/issue-5252",
-      "doc/090_participating.rst"
-    ],
     "create_date": "2025-04-05T07:15:57Z",
-    "changelog": "+Enhancement: Add a documentation section about \"Writing tests\" for restic\n+\n+doc/090_participating.rst now contains a few paragraphs about adding tests to\n+restic.\n+\n+https://github.com/restic/restic/issues/5252\n+https://github.com/restic/restic/pull/5346"
+    "changelog": "Enhancement: Add a documentation section about \"Writing tests\" for restic",
+    "additions": 78,
+    "deletions": 0,
+    "lines_in_file": 238,
+    "filesize": 9582,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5252",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 250
+      },
+      {
+        "filename": "doc/090_participating.rst",
+        "additions": 71,
+        "deletions": 0,
+        "lines_in_file": 231,
+        "filesize": 9332
+      }
+    ]
   },
   {
     "pr_number": 5338,
@@ -669,22 +2137,98 @@
     "title": "restrict repository size during 'restic backup' - issue #4585.",
     "author": "wplapper",
     "number_commits": 20,
-    "filelist": [
-      "changelog/unreleased/issue-4585",
-      "cmd/restic/cmd_backup.go",
-      "cmd/restic/cmd_backup_integration_test.go",
-      "cmd/restic/global.go",
-      "cmd/restic/integration_test.go",
-      "doc/040_backup.rst",
-      "internal/archiver/archiver.go",
-      "internal/archiver/file_saver.go",
-      "internal/archiver/file_saver_test.go",
-      "internal/repository/repository.go",
-      "internal/restic/repository.go",
-      "internal/restic/snapshot.go"
-    ],
     "create_date": "2025-04-01T11:58:16Z",
-    "changelog": "+Enhancement: limit repository size to a given maximum size during backup\n+\n+Restic backup can now limit the repository size to a given maximum value. The\n+repository size limit can be specified with the option `--max-repo-size`, with\n+the usual meaning for size related options.\n+\n+During backup, when `--max-repo-size` is enabled, the current size is monitored\n+by calculating its actual repository size plus the size of any new blob added during the backup process.\n+Once the defined limit is reached, `restic backup` will wind down all pending opeations and\n+create a new partial snapshot. The result of the backup run is flagged as in error.\n+\n+The size limit is a rough limit and can only be taken as a guide, since packfiles,\n+indexes and snapshots have to be finalized.\n+Due to the highly parallel processing of a backup process the limit can be overshot by\n+several megabytes.\n+\n+https://github.com/restic/restic/issues/4583\n+https://github.com/restic/restic/pull/5338"
+    "changelog": "Enhancement: limit repository size to a given maximum size during backup",
+    "additions": 244,
+    "deletions": 12,
+    "lines_in_file": 6366,
+    "filesize": 201989,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-4585",
+        "additions": 18,
+        "deletions": 0,
+        "lines_in_file": 18,
+        "filesize": 960
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 55,
+        "deletions": 1,
+        "lines_in_file": 751,
+        "filesize": 22871
+      },
+      {
+        "filename": "cmd/restic/cmd_backup_integration_test.go",
+        "additions": 43,
+        "deletions": 0,
+        "lines_in_file": 771,
+        "filesize": 24238
+      },
+      {
+        "filename": "cmd/restic/global.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 704,
+        "filesize": 22288
+      },
+      {
+        "filename": "cmd/restic/integration_test.go",
+        "additions": 16,
+        "deletions": 1,
+        "lines_in_file": 239,
+        "filesize": 7666
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 19,
+        "deletions": 4,
+        "lines_in_file": 816,
+        "filesize": 37281
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 16,
+        "deletions": 1,
+        "lines_in_file": 974,
+        "filesize": 28535
+      },
+      {
+        "filename": "internal/archiver/file_saver.go",
+        "additions": 7,
+        "deletions": 1,
+        "lines_in_file": 280,
+        "filesize": 6270
+      },
+      {
+        "filename": "internal/archiver/file_saver_test.go",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 99,
+        "filesize": 2309
+      },
+      {
+        "filename": "internal/repository/repository.go",
+        "additions": 59,
+        "deletions": 1,
+        "lines_in_file": 1273,
+        "filesize": 36251
+      },
+      {
+        "filename": "internal/restic/repository.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 173,
+        "filesize": 6316
+      },
+      {
+        "filename": "internal/restic/snapshot.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 268,
+        "filesize": 7004
+      }
+    ]
   },
   {
     "pr_number": 5314,
@@ -692,34 +2236,126 @@
     "title": "backend/sftp: Add sftp.server-alive-interval and sftp.server-alive-count-max options",
     "author": "merlinz01",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-5313",
-      "doc/030_preparing_a_new_repo.rst",
-      "internal/backend/sftp/config.go",
-      "internal/backend/sftp/config_test.go",
-      "internal/backend/sftp/sftp.go",
-      "internal/backend/sftp/sshcmd_test.go"
-    ],
     "create_date": "2025-03-25T19:23:46Z",
-    "changelog": "+Enhancement: Add `sftp.server-alive-interval` and `sftp.server-alive-count-max` options\n+\n+Restic previously did not set the `ServerAliveInterval` and `ServerAliveCountMax`\n+SSH options when connecting to an SFTP server, resulting in backups being\n+interrupted on some connections. It now sets these options to the values\n+specified by the `sftp.server-alive-interval` and `sftp.server-alive-count-max`\n+configuration options, to avoid connections being interrupted unnecessarily.\n+The default values are 25 seconds for `ServerAliveInterval` and\n+200 for `ServerAliveCountMax`. If either is set to -1,\n+the corresponding SSH option is not set and the value from the SSH\n+configuration is used.\n+\n+https://github.com/restic/restic/issues/5313\n+https://forum.restic.net/t/robustness-of-repository-issue-resolved/1475"
+    "changelog": "Enhancement: Add `sftp.server-alive-interval` and `sftp.server-alive-count-max` options",
+    "additions": 176,
+    "deletions": 48,
+    "lines_in_file": 1862,
+    "filesize": 62959,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5313",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 802
+      },
+      {
+        "filename": "doc/030_preparing_a_new_repo.rst",
+        "additions": 5,
+        "deletions": 7,
+        "lines_in_file": 857,
+        "filesize": 35063
+      },
+      {
+        "filename": "internal/backend/sftp/config.go",
+        "additions": 11,
+        "deletions": 3,
+        "lines_in_file": 101,
+        "filesize": 3001
+      },
+      {
+        "filename": "internal/backend/sftp/config_test.go",
+        "additions": 90,
+        "deletions": 30,
+        "lines_in_file": 154,
+        "filesize": 4864
+      },
+      {
+        "filename": "internal/backend/sftp/sftp.go",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 607,
+        "filesize": 15489
+      },
+      {
+        "filename": "internal/backend/sftp/sshcmd_test.go",
+        "additions": 47,
+        "deletions": 8,
+        "lines_in_file": 129,
+        "filesize": 3740
+      }
+    ]
   },
   {
     "pr_number": 5312,
     "title": "Fix all actual typos and use .codespellrc to skip others",
     "author": "ottok",
     "number_commits": 1,
-    "filelist": [
-      ".codespellrc",
-      "CHANGELOG.md",
-      "changelog/0.17.0_2024-07-26/issue-4602",
-      "changelog/unreleased/issue-5287",
-      "doc/045_working_with_repos.rst",
-      "internal/backend/cache/dir_test.go",
-      "internal/repository/prune_test.go",
-      "internal/restorer/filerestorer.go"
-    ],
     "create_date": "2025-03-25T17:43:32Z",
-    "changelog": " necessary to manually run `repair index` before runnning `recover`. This now\n happens automatically so that only `recover` is necessary.\n \n-https://github.com/restic/restic/issues/52897\n+https://github.com/restic/restic/issues/5287\n https://github.com/restic/restic/pull/5296"
+    "changelog": "necessary to manually run `repair index` before runnning `recover`. This now",
+    "additions": 36,
+    "deletions": 10,
+    "lines_in_file": 7953,
+    "filesize": 335223,
+    "filelist": [
+      {
+        "filename": ".codespellrc",
+        "additions": 25,
+        "deletions": 0,
+        "lines_in_file": 25,
+        "filesize": 623
+      },
+      {
+        "filename": "CHANGELOG.md",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 6710,
+        "filesize": 290502
+      },
+      {
+        "filename": "changelog/0.17.0_2024-07-26/issue-4602",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 22,
+        "filesize": 1211
+      },
+      {
+        "filename": "changelog/unreleased/issue-5287",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 8,
+        "filesize": 370
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 555,
+        "filesize": 24342
+      },
+      {
+        "filename": "internal/backend/cache/dir_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 31,
+        "filesize": 563
+      },
+      {
+        "filename": "internal/repository/prune_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 198,
+        "filesize": 6128
+      },
+      {
+        "filename": "internal/restorer/filerestorer.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 404,
+        "filesize": 11484
+      }
+    ]
   },
   {
     "pr_number": 5310,
@@ -727,13 +2363,35 @@
     "title": "Bugfix `restic find`: missing check for mtime --oldest/--newest",
     "author": "wplapper",
     "number_commits": 3,
-    "filelist": [
-      "changelog/unreleased/issue-5280",
-      "cmd/restic/cmd_find.go",
-      "cmd/restic/cmd_find_integration_test.go"
-    ],
     "create_date": "2025-03-25T17:00:53Z",
-    "changelog": "+Bugfix: `restic find` now checks for correct ordering of time related options\n+\n+`restic find` now checks for the correct ordering of the `node.ModTime` related options\n+`--oldest` and `--newest`.\n+If both options are present and the ordering of these options is incorrect,\n+and error message will be issued and the command will be terminated.\n+\n+https://github.com/restic/restic/issues/5280\n+https://github.com/restic/restic/pull/5310"
+    "changelog": "Bugfix: `restic find` now checks for correct ordering of time related options",
+    "additions": 32,
+    "deletions": 0,
+    "lines_in_file": 859,
+    "filesize": 24509,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5280",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 428
+      },
+      {
+        "filename": "cmd/restic/cmd_find.go",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 697,
+        "filesize": 18186
+      },
+      {
+        "filename": "cmd/restic/cmd_find_integration_test.go",
+        "additions": 19,
+        "deletions": 0,
+        "lines_in_file": 153,
+        "filesize": 5895
+      }
+    ]
   },
   {
     "pr_number": 5303,
@@ -741,24 +2399,112 @@
     "title": "Drop unencrypted key metadata",
     "author": "MichaelEischer",
     "number_commits": 6,
-    "filelist": [
-      "changelog/unreleased/issue-2128",
-      "cmd/restic/cmd_key_add.go",
-      "cmd/restic/cmd_key_integration_test.go",
-      "cmd/restic/cmd_key_list.go",
-      "cmd/restic/cmd_key_passwd.go",
-      "doc/070_encryption.rst",
-      "doc/075_scripting.rst",
-      "internal/crypto/crypto.go",
-      "internal/crypto/crypto_test.go",
-      "internal/repository/key.go",
-      "internal/repository/pack/pack.go",
-      "internal/repository/pack/pack_internal_test.go",
-      "internal/repository/repository.go",
-      "internal/repository/repository_internal_test.go"
-    ],
     "create_date": "2025-03-23T22:52:10Z",
-    "changelog": "+Change: Replace host and username in key metadata with encrypted label\n+\n+The key format has been changed to improve privacy. The unencrypted username\n+and hostname fields have been removed. Instead an encrypted label is available,\n+which can be set using the `--label` flag when adding a key.\n+\n+Additionally, the creation timestamp is now stored in UTC to avoid leaking the\n+timezone information.\n+\n+https://github.com/restic/restic/issues/2128\n+https://github.com/restic/restic/pull/5252"
+    "changelog": "Change: Replace host and username in key metadata with encrypted label",
+    "additions": 141,
+    "deletions": 103,
+    "lines_in_file": 4839,
+    "filesize": 160698,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-2128",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 11,
+        "filesize": 481
+      },
+      {
+        "filename": "cmd/restic/cmd_key_add.go",
+        "additions": 9,
+        "deletions": 5,
+        "lines_in_file": 142,
+        "filesize": 4340
+      },
+      {
+        "filename": "cmd/restic/cmd_key_integration_test.go",
+        "additions": 9,
+        "deletions": 7,
+        "lines_in_file": 216,
+        "filesize": 6412
+      },
+      {
+        "filename": "cmd/restic/cmd_key_list.go",
+        "additions": 17,
+        "deletions": 6,
+        "lines_in_file": 120,
+        "filesize": 3045
+      },
+      {
+        "filename": "cmd/restic/cmd_key_passwd.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 89,
+        "filesize": 2240
+      },
+      {
+        "filename": "doc/070_encryption.rst",
+        "additions": 9,
+        "deletions": 9,
+        "lines_in_file": 53,
+        "filesize": 1865
+      },
+      {
+        "filename": "doc/075_scripting.rst",
+        "additions": 13,
+        "deletions": 11,
+        "lines_in_file": 836,
+        "filesize": 51921
+      },
+      {
+        "filename": "internal/crypto/crypto.go",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 336,
+        "filesize": 8230
+      },
+      {
+        "filename": "internal/crypto/crypto_test.go",
+        "additions": 28,
+        "deletions": 0,
+        "lines_in_file": 330,
+        "filesize": 9360
+      },
+      {
+        "filename": "internal/repository/key.go",
+        "additions": 29,
+        "deletions": 32,
+        "lines_in_file": 308,
+        "filesize": 7470
+      },
+      {
+        "filename": "internal/repository/pack/pack.go",
+        "additions": 1,
+        "deletions": 4,
+        "lines_in_file": 409,
+        "filesize": 11435
+      },
+      {
+        "filename": "internal/repository/pack/pack_internal_test.go",
+        "additions": 1,
+        "deletions": 4,
+        "lines_in_file": 234,
+        "filesize": 6555
+      },
+      {
+        "filename": "internal/repository/repository.go",
+        "additions": 2,
+        "deletions": 15,
+        "lines_in_file": 1182,
+        "filesize": 33774
+      },
+      {
+        "filename": "internal/repository/repository_internal_test.go",
+        "additions": 2,
+        "deletions": 8,
+        "lines_in_file": 573,
+        "filesize": 13570
+      }
+    ]
   },
   {
     "pr_number": 5250,
@@ -767,29 +2513,147 @@
     "author": "kinazarov1999",
     "number_commits": 7,
     "number_comments": 39,
-    "filelist": [
-      "changelog/unreleased/pull-5250",
-      "cmd/restic/cmd_backup.go",
-      "doc/040_backup.rst",
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/archiver/file_saver.go",
-      "internal/archiver/file_saver_test.go",
-      "internal/fs/fs_local.go",
-      "internal/fs/fs_local_test.go",
-      "internal/fs/fs_local_unix.go",
-      "internal/fs/fs_local_vss_test.go",
-      "internal/fs/fs_local_windows.go",
-      "internal/fs/fs_reader.go",
-      "internal/fs/interface.go",
-      "internal/fs/node_test.go",
-      "internal/fs/node_unix_test.go",
-      "internal/fs/node_windows_test.go",
-      "internal/restic/tree_test.go",
-      "internal/test/helpers.go"
-    ],
     "create_date": "2025-02-16T17:46:31Z",
-    "changelog": "+Enhancement: Support native/parallel backup of block devices\n+\n+Backing up large block devices used to take a long time because Restic\n+had no native support for it and required passing the content of the device\n+to stdin, which meant that reading was performed linearly. It now supports\n+the --read-special flag, which reads the content of block devices and\n+follows symlinks pointing to them, and the --block-size option, which\n+divides each file into blocks of the specified size in gigabytes,\n+allowing them to be read in parallel.\n+\n+https://github.com/restic/restic/pull/5250\n+https://forum.restic.net/t/native-parallel-backup-of-block-devices/8641"
+    "changelog": "Enhancement: Support native/parallel backup of block devices",
+    "additions": 470,
+    "deletions": 102,
+    "lines_in_file": 8304,
+    "filesize": 240171,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5250",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 12,
+        "filesize": 644
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 11,
+        "deletions": 1,
+        "lines_in_file": 706,
+        "filesize": 21279
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 21,
+        "deletions": 1,
+        "lines_in_file": 821,
+        "filesize": 37098
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 53,
+        "deletions": 9,
+        "lines_in_file": 1007,
+        "filesize": 29632
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 5,
+        "deletions": 5,
+        "lines_in_file": 2536,
+        "filesize": 64431
+      },
+      {
+        "filename": "internal/archiver/file_saver.go",
+        "additions": 231,
+        "deletions": 67,
+        "lines_in_file": 438,
+        "filesize": 9890
+      },
+      {
+        "filename": "internal/archiver/file_saver_test.go",
+        "additions": 77,
+        "deletions": 6,
+        "lines_in_file": 168,
+        "filesize": 3860
+      },
+      {
+        "filename": "internal/fs/fs_local.go",
+        "additions": 16,
+        "deletions": 2,
+        "lines_in_file": 189,
+        "filesize": 4872
+      },
+      {
+        "filename": "internal/fs/fs_local_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 221,
+        "filesize": 5518
+      },
+      {
+        "filename": "internal/fs/fs_local_unix.go",
+        "additions": 19,
+        "deletions": 0,
+        "lines_in_file": 19,
+        "filesize": 355
+      },
+      {
+        "filename": "internal/fs/fs_local_vss_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 341,
+        "filesize": 8500
+      },
+      {
+        "filename": "internal/fs/fs_local_windows.go",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 206
+      },
+      {
+        "filename": "internal/fs/fs_reader.go",
+        "additions": 5,
+        "deletions": 1,
+        "lines_in_file": 262,
+        "filesize": 6254
+      },
+      {
+        "filename": "internal/fs/interface.go",
+        "additions": 2,
+        "deletions": 1,
+        "lines_in_file": 53,
+        "filesize": 1815
+      },
+      {
+        "filename": "internal/fs/node_test.go",
+        "additions": 3,
+        "deletions": 3,
+        "lines_in_file": 300,
+        "filesize": 9525
+      },
+      {
+        "filename": "internal/fs/node_unix_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 146,
+        "filesize": 3824
+      },
+      {
+        "filename": "internal/fs/node_windows_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 578,
+        "filesize": 20488
+      },
+      {
+        "filename": "internal/restic/tree_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 249,
+        "filesize": 6712
+      },
+      {
+        "filename": "internal/test/helpers.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 249,
+        "filesize": 5268
+      }
+    ]
   },
   {
     "pr_number": 5248,
@@ -797,15 +2661,49 @@
     "title": "feat(backends/s3): add warmup support for check command",
     "author": "gilbsgilbs",
     "number_commits": 1,
-    "filelist": [
-      "changelog/unreleased/issue-3202",
-      "cmd/restic/cmd_check.go",
-      "doc/faq.rst",
-      "internal/checker/checker.go",
-      "internal/checker/checker_test.go"
-    ],
     "create_date": "2025-02-13T18:48:12Z",
-    "changelog": "+Enhancement: Add warmup support for check command on S3 backend\n+\n+https://github.com/restic/restic/pull/5248\n+https://github.com/restic/restic/issues/3202\n+https://github.com/restic/restic/issues/2504"
+    "changelog": "Enhancement: Add warmup support for check command on S3 backend",
+    "additions": 87,
+    "deletions": 11,
+    "lines_in_file": 2087,
+    "filesize": 61714,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-3202",
+        "additions": 5,
+        "deletions": 0,
+        "lines_in_file": 5,
+        "filesize": 198
+      },
+      {
+        "filename": "cmd/restic/cmd_check.go",
+        "additions": 1,
+        "deletions": 4,
+        "lines_in_file": 538,
+        "filesize": 16400
+      },
+      {
+        "filename": "doc/faq.rst",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 297,
+        "filesize": 12779
+      },
+      {
+        "filename": "internal/checker/checker.go",
+        "additions": 27,
+        "deletions": 7,
+        "lines_in_file": 544,
+        "filesize": 14305
+      },
+      {
+        "filename": "internal/checker/checker_test.go",
+        "additions": 53,
+        "deletions": 0,
+        "lines_in_file": 703,
+        "filesize": 18032
+      }
+    ]
   },
   {
     "pr_number": 5239,
@@ -814,39 +2712,167 @@
     "author": "darkdragon-001",
     "number_commits": 5,
     "number_comments": 2,
-    "filelist": [
-      "changelog/unreleased/issue-3129",
-      "cmd/restic/cmd_forget.go",
-      "cmd/restic/cmd_prune.go",
-      "doc/060_forget.rst",
-      "internal/repository/prune.go"
-    ],
     "create_date": "2025-02-05T22:05:23Z",
-    "changelog": "+Enhancement: Add JSON support to prune\n+\n+Restic `prune` now also supports the `--json` option and gives all\n+statistics in JSON format.\n+\n+https://github.com/restic/restic/issues/3129\n+https://github.com/restic/restic/pull/5239"
+    "changelog": "Enhancement: Add JSON support to prune",
+    "additions": 70,
+    "deletions": 41,
+    "lines_in_file": 1924,
+    "filesize": 72573,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-3129",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 223
+      },
+      {
+        "filename": "cmd/restic/cmd_forget.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 404,
+        "filesize": 12998
+      },
+      {
+        "filename": "cmd/restic/cmd_prune.go",
+        "additions": 15,
+        "deletions": 16,
+        "lines_in_file": 308,
+        "filesize": 10591
+      },
+      {
+        "filename": "doc/060_forget.rst",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 536,
+        "filesize": 26563
+      },
+      {
+        "filename": "internal/repository/prune.go",
+        "additions": 45,
+        "deletions": 24,
+        "lines_in_file": 669,
+        "filesize": 22198
+      }
+    ]
   },
   {
     "pr_number": 5217,
     "title": "restore: reflink identical files on extraction",
     "author": "intelfx",
     "number_commits": 17,
+    "create_date": "2025-01-27T09:11:52Z",
+    "additions": 404,
+    "deletions": 40,
+    "lines_in_file": 2842,
+    "filesize": 107040,
     "filelist": [
-      "cmd/restic/cmd_restore.go",
-      "go.mod",
-      "go.sum",
-      "internal/fs/file.go",
-      "internal/fs/file_linux.go",
-      "internal/restorer/hardlinks_index.go",
-      "internal/restorer/hardlinks_index_test.go",
-      "internal/restorer/reflinks_index.go",
-      "internal/restorer/restorer.go",
-      "internal/ui/restore/json.go",
-      "internal/ui/restore/json_test.go",
-      "internal/ui/restore/progress.go",
-      "internal/ui/restore/progress_test.go",
-      "internal/ui/restore/text.go",
-      "internal/ui/restore/text_test.go"
-    ],
-    "create_date": "2025-01-27T09:11:52Z"
+      {
+        "filename": "cmd/restic/cmd_restore.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 323,
+        "filesize": 9824
+      },
+      {
+        "filename": "go.mod",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 109,
+        "filesize": 5014
+      },
+      {
+        "filename": "go.sum",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 334,
+        "filesize": 31726
+      },
+      {
+        "filename": "internal/fs/file.go",
+        "additions": 79,
+        "deletions": 0,
+        "lines_in_file": 170,
+        "filesize": 5031
+      },
+      {
+        "filename": "internal/fs/file_linux.go",
+        "additions": 66,
+        "deletions": 0,
+        "lines_in_file": 66,
+        "filesize": 1547
+      },
+      {
+        "filename": "internal/restorer/hardlinks_index.go",
+        "additions": 13,
+        "deletions": 9,
+        "lines_in_file": 61,
+        "filesize": 1627
+      },
+      {
+        "filename": "internal/restorer/hardlinks_index_test.go",
+        "additions": 4,
+        "deletions": 2,
+        "lines_in_file": 35,
+        "filesize": 787
+      },
+      {
+        "filename": "internal/restorer/reflinks_index.go",
+        "additions": 97,
+        "deletions": 0,
+        "lines_in_file": 97,
+        "filesize": 2880
+      },
+      {
+        "filename": "internal/restorer/restorer.go",
+        "additions": 52,
+        "deletions": 7,
+        "lines_in_file": 820,
+        "filesize": 23929
+      },
+      {
+        "filename": "internal/ui/restore/json.go",
+        "additions": 18,
+        "deletions": 0,
+        "lines_in_file": 169,
+        "filesize": 4806
+      },
+      {
+        "filename": "internal/ui/restore/json_test.go",
+        "additions": 5,
+        "deletions": 5,
+        "lines_in_file": 70,
+        "filesize": 3455
+      },
+      {
+        "filename": "internal/ui/restore/progress.go",
+        "additions": 31,
+        "deletions": 0,
+        "lines_in_file": 186,
+        "filesize": 3940
+      },
+      {
+        "filename": "internal/ui/restore/progress_test.go",
+        "additions": 8,
+        "deletions": 8,
+        "lines_in_file": 223,
+        "filesize": 6509
+      },
+      {
+        "filename": "internal/ui/restore/text.go",
+        "additions": 17,
+        "deletions": 3,
+        "lines_in_file": 108,
+        "filesize": 3424
+      },
+      {
+        "filename": "internal/ui/restore/text_test.go",
+        "additions": 6,
+        "deletions": 6,
+        "lines_in_file": 71,
+        "filesize": 2541
+      }
+    ]
   },
   {
     "pr_number": 5209,
@@ -855,19 +2881,77 @@
     "author": "kjetilho",
     "number_commits": 7,
     "number_comments": 10,
-    "filelist": [
-      "changelog/unreleased/issue-5136",
-      "cmd/restic/find.go",
-      "doc/045_working_with_repos.rst",
-      "doc/060_forget.rst",
-      "internal/restic/duration.go",
-      "internal/restic/duration_test.go",
-      "internal/restic/snapshot.go",
-      "internal/restic/snapshot_find.go",
-      "internal/restic/snapshot_find_test.go"
-    ],
     "create_date": "2025-01-14T00:31:20Z",
-    "changelog": "+Enhancement: Add snapshot filtering options --older-than and --newer-than\n+\n+Restic subcommands which work on a set of snapshots (``copy``,\n+``find``, ``forget``, ``snapshots``, ``tag`` and more) can now filter\n+on the absolute age of the snapshots specified as a duration, e.g.,\n+``--newer-than 1d12h`` to only operate on snapshots created less than\n+36 hours ago, or ``--older-than 90d`` to operate on snapshots older\n+than three months.\n+\n+https://github.com/restic/restic/issues/5136"
+    "changelog": "Enhancement: Add snapshot filtering options --older-than and --newer-than",
+    "additions": 121,
+    "deletions": 4,
+    "lines_in_file": 2032,
+    "filesize": 75346,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-5136",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 479
+      },
+      {
+        "filename": "cmd/restic/find.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 71,
+        "filesize": 3042
+      },
+      {
+        "filename": "doc/045_working_with_repos.rst",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 558,
+        "filesize": 24456
+      },
+      {
+        "filename": "doc/060_forget.rst",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 498,
+        "filesize": 24381
+      },
+      {
+        "filename": "internal/restic/duration.go",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 151,
+        "filesize": 2642
+      },
+      {
+        "filename": "internal/restic/duration_test.go",
+        "additions": 16,
+        "deletions": 0,
+        "lines_in_file": 122,
+        "filesize": 2807
+      },
+      {
+        "filename": "internal/restic/snapshot.go",
+        "additions": 16,
+        "deletions": 0,
+        "lines_in_file": 283,
+        "filesize": 7397
+      },
+      {
+        "filename": "internal/restic/snapshot_find.go",
+        "additions": 7,
+        "deletions": 3,
+        "lines_in_file": 197,
+        "filesize": 5320
+      },
+      {
+        "filename": "internal/restic/snapshot_find_test.go",
+        "additions": 51,
+        "deletions": 0,
+        "lines_in_file": 142,
+        "filesize": 4822
+      }
+    ]
   },
   {
     "pr_number": 5190,
@@ -875,10 +2959,20 @@
     "author": "jfly",
     "number_commits": 1,
     "number_comments": 7,
+    "create_date": "2024-12-20T10:50:32Z",
+    "additions": 95,
+    "deletions": 5,
+    "lines_in_file": 1049,
+    "filesize": 30566,
     "filelist": [
-      "internal/archiver/archiver.go"
-    ],
-    "create_date": "2024-12-20T10:50:32Z"
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 95,
+        "deletions": 5,
+        "lines_in_file": 1049,
+        "filesize": 30566
+      }
+    ]
   },
   {
     "pr_number": 5171,
@@ -886,102 +2980,558 @@
     "title": "Back up and restore Windows Alternate Data Streams",
     "author": "aneesh-n",
     "number_commits": 15,
-    "filelist": [
-      "changelog/unreleased/pull-5171",
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/archiver/archiver_unix.go",
-      "internal/archiver/archiver_windows.go",
-      "internal/archiver/archiver_windows_test.go",
-      "internal/archiver/testing.go",
-      "internal/archiver/testing_unix.go",
-      "internal/archiver/testing_windows.go",
-      "internal/filter/filter.go",
-      "internal/fs/file_unix.go",
-      "internal/fs/file_windows.go",
-      "internal/fs/node_windows.go",
-      "internal/restic/ads_windows.go",
-      "internal/restic/ads_windows_test.go",
-      "internal/restic/node.go",
-      "internal/restic/node_windows.go",
-      "internal/restorer/filerestorer.go",
-      "internal/restorer/fileswriter.go",
-      "internal/restorer/fileswriter_test.go",
-      "internal/restorer/fileswriter_unix.go",
-      "internal/restorer/fileswriter_windows.go",
-      "internal/restorer/restorer.go",
-      "internal/restorer/restorer_test.go",
-      "internal/restorer/restorer_unix.go",
-      "internal/restorer/restorer_unix_test.go",
-      "internal/restorer/restorer_windows.go",
-      "internal/restorer/restorer_windows_test.go",
-      "internal/ui/restore/progress.go",
-      "internal/ui/restore/progress_test.go",
-      "internal/ui/restore/progress_unix.go",
-      "internal/ui/restore/progress_windows.go"
-    ],
     "create_date": "2024-12-03T12:35:41Z",
-    "changelog": "+Enhancement: Back up and restore Windows Alternate Data Streams\n+\n+Restic did not back up Alternate Data Streams in Windows. Restic now backs up Alternate Data Streams (ADS) and restores them back to the main files.\n+The Alternate Data Streams are backed up like any other normal files, and the full name of the stream is stored as the name of the file.\n+During restore, the ADS are restored and attached to the original files as Alternate Data Streams.\n+For progress and summary, the ADS are not counted in the file counts, but the sizes of the ADS files are counted.\n+\n+https://github.com/restic/restic/pull/5171\n+https://github.com/restic/restic/issues/1401"
+    "changelog": "Enhancement: Back up and restore Windows Alternate Data Streams",
+    "additions": 2016,
+    "deletions": 438,
+    "lines_in_file": 11176,
+    "filesize": 319108,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-5171",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 653
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 27,
+        "deletions": 24,
+        "lines_in_file": 966,
+        "filesize": 28877
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 2536,
+        "filesize": 64397
+      },
+      {
+        "filename": "internal/archiver/archiver_unix.go",
+        "additions": 68,
+        "deletions": 0,
+        "lines_in_file": 68,
+        "filesize": 2254
+      },
+      {
+        "filename": "internal/archiver/archiver_windows.go",
+        "additions": 132,
+        "deletions": 0,
+        "lines_in_file": 132,
+        "filesize": 4636
+      },
+      {
+        "filename": "internal/archiver/archiver_windows_test.go",
+        "additions": 223,
+        "deletions": 0,
+        "lines_in_file": 223,
+        "filesize": 7534
+      },
+      {
+        "filename": "internal/archiver/testing.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 346,
+        "filesize": 8499
+      },
+      {
+        "filename": "internal/archiver/testing_unix.go",
+        "additions": 20,
+        "deletions": 0,
+        "lines_in_file": 20,
+        "filesize": 477
+      },
+      {
+        "filename": "internal/archiver/testing_windows.go",
+        "additions": 43,
+        "deletions": 0,
+        "lines_in_file": 43,
+        "filesize": 1359
+      },
+      {
+        "filename": "internal/filter/filter.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 330,
+        "filesize": 8525
+      },
+      {
+        "filename": "internal/fs/file_unix.go",
+        "additions": 6,
+        "deletions": 0,
+        "lines_in_file": 56,
+        "filesize": 1291
+      },
+      {
+        "filename": "internal/fs/file_windows.go",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 144,
+        "filesize": 4635
+      },
+      {
+        "filename": "internal/fs/node_windows.go",
+        "additions": 73,
+        "deletions": 27,
+        "lines_in_file": 538,
+        "filesize": 18945
+      },
+      {
+        "filename": "internal/restic/ads_windows.go",
+        "additions": 144,
+        "deletions": 0,
+        "lines_in_file": 144,
+        "filesize": 4188
+      },
+      {
+        "filename": "internal/restic/ads_windows_test.go",
+        "additions": 187,
+        "deletions": 0,
+        "lines_in_file": 187,
+        "filesize": 4342
+      },
+      {
+        "filename": "internal/restic/node.go",
+        "additions": 6,
+        "deletions": 1,
+        "lines_in_file": 506,
+        "filesize": 16627
+      },
+      {
+        "filename": "internal/restic/node_windows.go",
+        "additions": 61,
+        "deletions": 0,
+        "lines_in_file": 87,
+        "filesize": 3243
+      },
+      {
+        "filename": "internal/restorer/filerestorer.go",
+        "additions": 10,
+        "deletions": 7,
+        "lines_in_file": 384,
+        "filesize": 10951
+      },
+      {
+        "filename": "internal/restorer/fileswriter.go",
+        "additions": 8,
+        "deletions": 31,
+        "lines_in_file": 196,
+        "filesize": 4735
+      },
+      {
+        "filename": "internal/restorer/fileswriter_test.go",
+        "additions": 8,
+        "deletions": 8,
+        "lines_in_file": 170,
+        "filesize": 4471
+      },
+      {
+        "filename": "internal/restorer/fileswriter_unix.go",
+        "additions": 82,
+        "deletions": 0,
+        "lines_in_file": 82,
+        "filesize": 2966
+      },
+      {
+        "filename": "internal/restorer/fileswriter_windows.go",
+        "additions": 248,
+        "deletions": 0,
+        "lines_in_file": 248,
+        "filesize": 9535
+      },
+      {
+        "filename": "internal/restorer/restorer.go",
+        "additions": 12,
+        "deletions": 12,
+        "lines_in_file": 767,
+        "filesize": 22228
+      },
+      {
+        "filename": "internal/restorer/restorer_test.go",
+        "additions": 91,
+        "deletions": 22,
+        "lines_in_file": 1634,
+        "filesize": 44591
+      },
+      {
+        "filename": "internal/restorer/restorer_unix.go",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 23,
+        "filesize": 791
+      },
+      {
+        "filename": "internal/restorer/restorer_unix_test.go",
+        "additions": 3,
+        "deletions": 3,
+        "lines_in_file": 144,
+        "filesize": 3565
+      },
+      {
+        "filename": "internal/restorer/restorer_windows.go",
+        "additions": 24,
+        "deletions": 1,
+        "lines_in_file": 36,
+        "filesize": 1175
+      },
+      {
+        "filename": "internal/restorer/restorer_windows_test.go",
+        "additions": 429,
+        "deletions": 278,
+        "lines_in_file": 726,
+        "filesize": 22444
+      },
+      {
+        "filename": "internal/ui/restore/progress.go",
+        "additions": 12,
+        "deletions": 2,
+        "lines_in_file": 164,
+        "filesize": 3373
+      },
+      {
+        "filename": "internal/ui/restore/progress_test.go",
+        "additions": 34,
+        "deletions": 17,
+        "lines_in_file": 238,
+        "filesize": 7142
+      },
+      {
+        "filename": "internal/ui/restore/progress_unix.go",
+        "additions": 15,
+        "deletions": 0,
+        "lines_in_file": 15,
+        "filesize": 311
+      },
+      {
+        "filename": "internal/ui/restore/progress_windows.go",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 348
+      }
+    ]
   },
   {
     "pr_number": 5160,
     "title": "fs: filehandle-based File",
     "author": "MichaelEischer",
     "number_commits": 15,
+    "create_date": "2024-11-30T18:01:49Z",
+    "additions": 1114,
+    "deletions": 403,
+    "lines_in_file": 4957,
+    "filesize": 148389,
     "filelist": [
-      "internal/archiver/archiver.go",
-      "internal/feature/registry.go",
-      "internal/fs/ea_windows.go",
-      "internal/fs/ea_windows_test.go",
-      "internal/fs/file_windows.go",
-      "internal/fs/freadlink_darwin.go",
-      "internal/fs/freadlink_linux.go",
-      "internal/fs/freadlink_test.go",
-      "internal/fs/freadlink_windows.go",
-      "internal/fs/fs_local.go",
-      "internal/fs/fs_local_fd.go",
-      "internal/fs/fs_local_nofd.go",
-      "internal/fs/fs_local_test.go",
-      "internal/fs/fs_local_unix_test.go",
-      "internal/fs/fs_local_xattr_test.go",
-      "internal/fs/meta.go",
-      "internal/fs/meta_darwin.go",
-      "internal/fs/meta_fd.go",
-      "internal/fs/meta_fd_notwindows.go",
-      "internal/fs/meta_linux.go",
-      "internal/fs/meta_noxattr.go",
-      "internal/fs/meta_unix.go",
-      "internal/fs/meta_windows.go",
-      "internal/fs/meta_xattr.go",
-      "internal/fs/node.go",
-      "internal/fs/node_noxattr.go",
-      "internal/fs/node_unix.go",
-      "internal/fs/node_windows.go",
-      "internal/fs/node_windows_test.go",
-      "internal/fs/node_xattr.go",
-      "internal/fs/node_xattr_all_test.go",
-      "internal/fs/sd_windows.go",
-      "internal/fs/sd_windows_test.go"
-    ],
-    "create_date": "2024-11-30T18:01:49Z"
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 967,
+        "filesize": 28230
+      },
+      {
+        "filename": "internal/feature/registry.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 23,
+        "filesize": 1376
+      },
+      {
+        "filename": "internal/fs/ea_windows.go",
+        "additions": 3,
+        "deletions": 7,
+        "lines_in_file": 296,
+        "filesize": 9158
+      },
+      {
+        "filename": "internal/fs/ea_windows_test.go",
+        "additions": 9,
+        "deletions": 2,
+        "lines_in_file": 286,
+        "filesize": 8389
+      },
+      {
+        "filename": "internal/fs/file_windows.go",
+        "additions": 5,
+        "deletions": 18,
+        "lines_in_file": 123,
+        "filesize": 3817
+      },
+      {
+        "filename": "internal/fs/freadlink_darwin.go",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 202
+      },
+      {
+        "filename": "internal/fs/freadlink_linux.go",
+        "additions": 47,
+        "deletions": 0,
+        "lines_in_file": 47,
+        "filesize": 947
+      },
+      {
+        "filename": "internal/fs/freadlink_test.go",
+        "additions": 24,
+        "deletions": 0,
+        "lines_in_file": 24,
+        "filesize": 475
+      },
+      {
+        "filename": "internal/fs/freadlink_windows.go",
+        "additions": 138,
+        "deletions": 0,
+        "lines_in_file": 138,
+        "filesize": 4664
+      },
+      {
+        "filename": "internal/fs/fs_local.go",
+        "additions": 84,
+        "deletions": 47,
+        "lines_in_file": 212,
+        "filesize": 5564
+      },
+      {
+        "filename": "internal/fs/fs_local_fd.go",
+        "additions": 53,
+        "deletions": 0,
+        "lines_in_file": 53,
+        "filesize": 951
+      },
+      {
+        "filename": "internal/fs/fs_local_nofd.go",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 158
+      },
+      {
+        "filename": "internal/fs/fs_local_test.go",
+        "additions": 49,
+        "deletions": 9,
+        "lines_in_file": 261,
+        "filesize": 6559
+      },
+      {
+        "filename": "internal/fs/fs_local_unix_test.go",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 44,
+        "filesize": 926
+      },
+      {
+        "filename": "internal/fs/fs_local_xattr_test.go",
+        "additions": 76,
+        "deletions": 0,
+        "lines_in_file": 76,
+        "filesize": 1841
+      },
+      {
+        "filename": "internal/fs/meta.go",
+        "additions": 52,
+        "deletions": 0,
+        "lines_in_file": 52,
+        "filesize": 979
+      },
+      {
+        "filename": "internal/fs/meta_darwin.go",
+        "additions": 40,
+        "deletions": 0,
+        "lines_in_file": 40,
+        "filesize": 792
+      },
+      {
+        "filename": "internal/fs/meta_fd.go",
+        "additions": 37,
+        "deletions": 0,
+        "lines_in_file": 37,
+        "filesize": 739
+      },
+      {
+        "filename": "internal/fs/meta_fd_notwindows.go",
+        "additions": 19,
+        "deletions": 0,
+        "lines_in_file": 19,
+        "filesize": 468
+      },
+      {
+        "filename": "internal/fs/meta_linux.go",
+        "additions": 62,
+        "deletions": 0,
+        "lines_in_file": 62,
+        "filesize": 1311
+      },
+      {
+        "filename": "internal/fs/meta_noxattr.go",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 266
+      },
+      {
+        "filename": "internal/fs/meta_unix.go",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 8,
+        "filesize": 140
+      },
+      {
+        "filename": "internal/fs/meta_windows.go",
+        "additions": 138,
+        "deletions": 0,
+        "lines_in_file": 138,
+        "filesize": 4240
+      },
+      {
+        "filename": "internal/fs/meta_xattr.go",
+        "additions": 60,
+        "deletions": 0,
+        "lines_in_file": 60,
+        "filesize": 1452
+      },
+      {
+        "filename": "internal/fs/node.go",
+        "additions": 13,
+        "deletions": 8,
+        "lines_in_file": 304,
+        "filesize": 7669
+      },
+      {
+        "filename": "internal/fs/node_noxattr.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 18,
+        "filesize": 422
+      },
+      {
+        "filename": "internal/fs/node_unix.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 24,
+        "filesize": 571
+      },
+      {
+        "filename": "internal/fs/node_windows.go",
+        "additions": 12,
+        "deletions": 127,
+        "lines_in_file": 377,
+        "filesize": 12927
+      },
+      {
+        "filename": "internal/fs/node_windows_test.go",
+        "additions": 62,
+        "deletions": 140,
+        "lines_in_file": 500,
+        "filesize": 17917
+      },
+      {
+        "filename": "internal/fs/node_xattr.go",
+        "additions": 67,
+        "deletions": 30,
+        "lines_in_file": 158,
+        "filesize": 4114
+      },
+      {
+        "filename": "internal/fs/node_xattr_all_test.go",
+        "additions": 2,
+        "deletions": 1,
+        "lines_in_file": 58,
+        "filesize": 1401
+      },
+      {
+        "filename": "internal/fs/sd_windows.go",
+        "additions": 11,
+        "deletions": 11,
+        "lines_in_file": 462,
+        "filesize": 17932
+      },
+      {
+        "filename": "internal/fs/sd_windows_test.go",
+        "additions": 5,
+        "deletions": 1,
+        "lines_in_file": 64,
+        "filesize": 1792
+      }
+    ]
   },
   {
     "pr_number": 5104,
     "title": "fs: Reimplement Stat/Lstat on Linux using statx",
     "author": "greatroar",
     "number_commits": 1,
+    "create_date": "2024-10-27T09:50:34Z",
+    "additions": 130,
+    "deletions": 23,
+    "lines_in_file": 837,
+    "filesize": 22725,
     "filelist": [
-      "internal/fs/fs_local.go",
-      "internal/fs/node_test.go",
-      "internal/fs/node_unix_test.go",
-      "internal/fs/preallocate_test.go",
-      "internal/fs/setflags_linux_test.go",
-      "internal/fs/stat_linux.go",
-      "internal/fs/stat_notlinux.go",
-      "internal/fs/stat_test.go",
-      "internal/fs/stat_unix.go"
-    ],
-    "create_date": "2024-10-27T09:50:34Z"
+      {
+        "filename": "internal/fs/fs_local.go",
+        "additions": 0,
+        "deletions": 14,
+        "lines_in_file": 85,
+        "filesize": 2740
+      },
+      {
+        "filename": "internal/fs/node_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 324,
+        "filesize": 9769
+      },
+      {
+        "filename": "internal/fs/node_unix_test.go",
+        "additions": 1,
+        "deletions": 2,
+        "lines_in_file": 135,
+        "filesize": 3392
+      },
+      {
+        "filename": "internal/fs/preallocate_test.go",
+        "additions": 1,
+        "deletions": 3,
+        "lines_in_file": 36,
+        "filesize": 726
+      },
+      {
+        "filename": "internal/fs/setflags_linux_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 70,
+        "filesize": 1559
+      },
+      {
+        "filename": "internal/fs/stat_linux.go",
+        "additions": 104,
+        "deletions": 0,
+        "lines_in_file": 104,
+        "filesize": 2697
+      },
+      {
+        "filename": "internal/fs/stat_notlinux.go",
+        "additions": 19,
+        "deletions": 0,
+        "lines_in_file": 19,
+        "filesize": 593
+      },
+      {
+        "filename": "internal/fs/stat_test.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 31,
+        "filesize": 555
+      },
+      {
+        "filename": "internal/fs/stat_unix.go",
+        "additions": 1,
+        "deletions": 2,
+        "lines_in_file": 33,
+        "filesize": 694
+      }
+    ]
   },
   {
     "pr_number": 5062,
@@ -989,81 +3539,367 @@
     "author": "phillipp",
     "number_commits": 4,
     "number_comments": 9,
+    "create_date": "2024-09-15T17:02:08Z",
+    "additions": 193,
+    "deletions": 63,
+    "lines_in_file": 830,
+    "filesize": 20015,
     "filelist": [
-      "cmd/restic/cmd_dump.go",
-      "cmd/restic/cmd_dump_test.go",
-      "internal/dump/common.go",
-      "internal/dump/common_test.go",
-      "internal/dump/tar.go",
-      "internal/dump/zip.go"
-    ],
-    "create_date": "2024-09-15T17:02:08Z"
+      {
+        "filename": "cmd/restic/cmd_dump.go",
+        "additions": 118,
+        "deletions": 35,
+        "lines_in_file": 287,
+        "filesize": 7857
+      },
+      {
+        "filename": "cmd/restic/cmd_dump_test.go",
+        "additions": 28,
+        "deletions": 0,
+        "lines_in_file": 55,
+        "filesize": 1120
+      },
+      {
+        "filename": "internal/dump/common.go",
+        "additions": 32,
+        "deletions": 4,
+        "lines_in_file": 206,
+        "filesize": 4452
+      },
+      {
+        "filename": "internal/dump/common_test.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 99,
+        "filesize": 2469
+      },
+      {
+        "filename": "internal/dump/tar.go",
+        "additions": 7,
+        "deletions": 13,
+        "lines_in_file": 127,
+        "filesize": 3002
+      },
+      {
+        "filename": "internal/dump/zip.go",
+        "additions": 6,
+        "deletions": 11,
+        "lines_in_file": 56,
+        "filesize": 1115
+      }
+    ]
   },
   {
     "pr_number": 4754,
     "title": "Add WebDAV server (ie \"mount\" on Windows)",
     "author": "ducalex",
     "number_commits": 4,
+    "create_date": "2024-04-06T17:57:48Z",
+    "additions": 469,
+    "deletions": 0,
+    "lines_in_file": 469,
+    "filesize": 11900,
     "filelist": [
-      "cmd/restic/cmd_webdav.go"
-    ],
-    "create_date": "2024-04-06T17:57:48Z"
+      {
+        "filename": "cmd/restic/cmd_webdav.go",
+        "additions": 469,
+        "deletions": 0,
+        "lines_in_file": 469,
+        "filesize": 11900
+      }
+    ]
   },
   {
     "pr_number": 4711,
     "title": "Backup from Cloud Service",
     "author": "rmanibus",
     "number_commits": 3,
+    "create_date": "2024-02-25T14:55:46Z",
+    "additions": 1990,
+    "deletions": 735,
+    "lines_in_file": 10653,
+    "filesize": 271574,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "cmd/restic/cmd_backup_test.go",
-      "cmd/restic/cmd_recover.go",
-      "cmd/restic/exclude.go",
-      "cmd/restic/exclude_test.go",
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/archiver/file_saver.go",
-      "internal/archiver/file_saver_test.go",
-      "internal/archiver/scanner.go",
-      "internal/archiver/scanner_test.go",
-      "internal/archiver/testing.go",
-      "internal/archiver/testing_test.go",
-      "internal/archiver/tree.go",
-      "internal/archiver/tree_test.go",
-      "internal/checker/checker_test.go",
-      "internal/dump/common_test.go",
-      "internal/frontend/google_drive_file_content.go",
-      "internal/frontend/google_drive_file_metadata.go",
-      "internal/frontend/google_drive_frontend.go",
-      "internal/frontend/google_drive_lazy_file_metadata.go",
-      "internal/frontend/interface.go",
-      "internal/frontend/local_file_content.go",
-      "internal/frontend/local_file_metadata.go",
-      "internal/frontend/local_frontend.go",
-      "internal/frontend/local_frontend_test.go",
-      "internal/frontend/local_lazy_file_metadata.go",
-      "internal/frontend/local_root_directory.go",
-      "internal/frontend/testing.go",
-      "internal/fs/fs_google_drive.go",
-      "internal/restic/file.go",
-      "internal/restic/snapshot.go",
-      "internal/restic/snapshot_test.go",
-      "internal/restic/testing.go",
-      "internal/restorer/restorer_test.go"
-    ],
-    "create_date": "2024-02-25T14:55:46Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 92,
+        "deletions": 71,
+        "lines_in_file": 697,
+        "filesize": 20623
+      },
+      {
+        "filename": "cmd/restic/cmd_backup_test.go",
+        "additions": 6,
+        "deletions": 2,
+        "lines_in_file": 116,
+        "filesize": 3265
+      },
+      {
+        "filename": "cmd/restic/cmd_recover.go",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 178,
+        "filesize": 4256
+      },
+      {
+        "filename": "cmd/restic/exclude.go",
+        "additions": 19,
+        "deletions": 18,
+        "lines_in_file": 499,
+        "filesize": 14127
+      },
+      {
+        "filename": "cmd/restic/exclude_test.go",
+        "additions": 11,
+        "deletions": 5,
+        "lines_in_file": 318,
+        "filesize": 9148
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 74,
+        "deletions": 151,
+        "lines_in_file": 746,
+        "filesize": 21565
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 134,
+        "deletions": 85,
+        "lines_in_file": 2296,
+        "filesize": 55682
+      },
+      {
+        "filename": "internal/archiver/file_saver.go",
+        "additions": 8,
+        "deletions": 14,
+        "lines_in_file": 271,
+        "filesize": 6032
+      },
+      {
+        "filename": "internal/archiver/file_saver_test.go",
+        "additions": 6,
+        "deletions": 8,
+        "lines_in_file": 100,
+        "filesize": 2180
+      },
+      {
+        "filename": "internal/archiver/scanner.go",
+        "additions": 29,
+        "deletions": 29,
+        "lines_in_file": 146,
+        "filesize": 3540
+      },
+      {
+        "filename": "internal/archiver/scanner_test.go",
+        "additions": 14,
+        "deletions": 12,
+        "lines_in_file": 323,
+        "filesize": 7734
+      },
+      {
+        "filename": "internal/archiver/testing.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 324,
+        "filesize": 8129
+      },
+      {
+        "filename": "internal/archiver/testing_test.go",
+        "additions": 4,
+        "deletions": 3,
+        "lines_in_file": 496,
+        "filesize": 11106
+      },
+      {
+        "filename": "internal/archiver/tree.go",
+        "additions": 44,
+        "deletions": 111,
+        "lines_in_file": 233,
+        "filesize": 5416
+      },
+      {
+        "filename": "internal/archiver/tree_test.go",
+        "additions": 80,
+        "deletions": 192,
+        "lines_in_file": 354,
+        "filesize": 12363
+      },
+      {
+        "filename": "internal/checker/checker_test.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 627,
+        "filesize": 15731
+      },
+      {
+        "filename": "internal/dump/common_test.go",
+        "additions": 3,
+        "deletions": 2,
+        "lines_in_file": 98,
+        "filesize": 2581
+      },
+      {
+        "filename": "internal/frontend/google_drive_file_content.go",
+        "additions": 43,
+        "deletions": 0,
+        "lines_in_file": 43,
+        "filesize": 888
+      },
+      {
+        "filename": "internal/frontend/google_drive_file_metadata.go",
+        "additions": 107,
+        "deletions": 0,
+        "lines_in_file": 107,
+        "filesize": 2691
+      },
+      {
+        "filename": "internal/frontend/google_drive_frontend.go",
+        "additions": 115,
+        "deletions": 0,
+        "lines_in_file": 115,
+        "filesize": 3006
+      },
+      {
+        "filename": "internal/frontend/google_drive_lazy_file_metadata.go",
+        "additions": 113,
+        "deletions": 0,
+        "lines_in_file": 113,
+        "filesize": 2716
+      },
+      {
+        "filename": "internal/frontend/interface.go",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 10,
+        "filesize": 234
+      },
+      {
+        "filename": "internal/frontend/local_file_content.go",
+        "additions": 35,
+        "deletions": 0,
+        "lines_in_file": 35,
+        "filesize": 720
+      },
+      {
+        "filename": "internal/frontend/local_file_metadata.go",
+        "additions": 124,
+        "deletions": 0,
+        "lines_in_file": 124,
+        "filesize": 3123
+      },
+      {
+        "filename": "internal/frontend/local_frontend.go",
+        "additions": 160,
+        "deletions": 0,
+        "lines_in_file": 160,
+        "filesize": 3440
+      },
+      {
+        "filename": "internal/frontend/local_frontend_test.go",
+        "additions": 134,
+        "deletions": 0,
+        "lines_in_file": 134,
+        "filesize": 2807
+      },
+      {
+        "filename": "internal/frontend/local_lazy_file_metadata.go",
+        "additions": 122,
+        "deletions": 0,
+        "lines_in_file": 122,
+        "filesize": 2929
+      },
+      {
+        "filename": "internal/frontend/local_root_directory.go",
+        "additions": 44,
+        "deletions": 0,
+        "lines_in_file": 44,
+        "filesize": 1023
+      },
+      {
+        "filename": "internal/frontend/testing.go",
+        "additions": 26,
+        "deletions": 0,
+        "lines_in_file": 26,
+        "filesize": 590
+      },
+      {
+        "filename": "internal/fs/fs_google_drive.go",
+        "additions": 275,
+        "deletions": 0,
+        "lines_in_file": 275,
+        "filesize": 6383
+      },
+      {
+        "filename": "internal/restic/file.go",
+        "additions": 64,
+        "deletions": 0,
+        "lines_in_file": 64,
+        "filesize": 1256
+      },
+      {
+        "filename": "internal/restic/snapshot.go",
+        "additions": 3,
+        "deletions": 4,
+        "lines_in_file": 246,
+        "filesize": 6039
+      },
+      {
+        "filename": "internal/restic/snapshot_test.go",
+        "additions": 2,
+        "deletions": 2,
+        "lines_in_file": 51,
+        "filesize": 1189
+      },
+      {
+        "filename": "internal/restic/testing.go",
+        "additions": 70,
+        "deletions": 13,
+        "lines_in_file": 265,
+        "filesize": 6149
+      },
+      {
+        "filename": "internal/restorer/restorer_test.go",
+        "additions": 10,
+        "deletions": 8,
+        "lines_in_file": 897,
+        "filesize": 22913
+      }
+    ]
   },
   {
     "pr_number": 4469,
     "title": "backup: support reading changed files/dirs from a file",
     "author": "haslersn",
     "number_commits": 1,
+    "create_date": "2023-09-16T09:00:09Z",
+    "additions": 147,
+    "deletions": 41,
+    "lines_in_file": 1923,
+    "filesize": 54805,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "internal/archiver/archiver.go",
-      "internal/archiver/testing.go"
-    ],
-    "create_date": "2023-09-16T09:00:09Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 80,
+        "deletions": 23,
+        "lines_in_file": 738,
+        "filesize": 21939
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 66,
+        "deletions": 17,
+        "lines_in_file": 862,
+        "filesize": 24861
+      },
+      {
+        "filename": "internal/archiver/testing.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 323,
+        "filesize": 8005
+      }
+    ]
   },
   {
     "pr_number": 4276,
@@ -1072,28 +3908,90 @@
     "author": "ducalex",
     "number_commits": 10,
     "number_comments": 11,
-    "filelist": [
-      "changelog/unreleased/pull-4276",
-      "cmd/restic/cmd_serve.go",
-      "internal/server/assets/index.html",
-      "internal/server/assets/style.css",
-      "internal/server/assets/tree.html",
-      "internal/server/server.go"
-    ],
     "create_date": "2023-03-29T20:45:46Z",
-    "changelog": "+Enhancement: Implement web server to browse snapshots\n+\n+Currently the canonical way of browsing a repository's snapshots to view\n+or restore files is `mount`. Unfortunately `mount` depends on fuse which\n+is not available on all operating systems.\n+\n+The new `restic serve` command presents a web interface to browse a\n+repository's snapshots. It allows to view and download files individually\n+or as a group (as a tar archive) from snapshots.\n+\n+https://github.com/restic/restic/pull/4276\n+https://github.com/restic/restic/issues/60\n+ \n\\ No newline at end of file"
+    "changelog": "Enhancement: Implement web server to browse snapshots",
+    "additions": 492,
+    "deletions": 0,
+    "lines_in_file": 492,
+    "filesize": 12186,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-4276",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 13,
+        "filesize": 524
+      },
+      {
+        "filename": "cmd/restic/cmd_serve.go",
+        "additions": 108,
+        "deletions": 0,
+        "lines_in_file": 108,
+        "filesize": 2351
+      },
+      {
+        "filename": "internal/server/assets/index.html",
+        "additions": 34,
+        "deletions": 0,
+        "lines_in_file": 34,
+        "filesize": 726
+      },
+      {
+        "filename": "internal/server/assets/style.css",
+        "additions": 40,
+        "deletions": 0,
+        "lines_in_file": 40,
+        "filesize": 454
+      },
+      {
+        "filename": "internal/server/assets/tree.html",
+        "additions": 51,
+        "deletions": 0,
+        "lines_in_file": 51,
+        "filesize": 1607
+      },
+      {
+        "filename": "internal/server/server.go",
+        "additions": 246,
+        "deletions": 0,
+        "lines_in_file": 246,
+        "filesize": 6524
+      }
+    ]
   },
   {
     "pr_number": 4267,
     "title": "archiver: Shortcut for handling empty files",
     "author": "greatroar",
     "number_commits": 1,
+    "create_date": "2023-03-23T07:39:03Z",
+    "additions": 22,
+    "deletions": 13,
+    "lines_in_file": 1592,
+    "filesize": 40063,
     "filelist": [
-      "internal/archiver/archiver.go",
-      "internal/fs/fs_reader.go",
-      "internal/fs/fs_reader_test.go"
-    ],
-    "create_date": "2023-03-23T07:39:03Z"
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 20,
+        "deletions": 0,
+        "lines_in_file": 831,
+        "filesize": 24046
+      },
+      {
+        "filename": "internal/fs/fs_reader.go",
+        "additions": 2,
+        "deletions": 5,
+        "lines_in_file": 323,
+        "filesize": 7660
+      },
+      {
+        "filename": "internal/fs/fs_reader_test.go",
+        "additions": 0,
+        "deletions": 8,
+        "lines_in_file": 438,
+        "filesize": 8357
+      }
+    ]
   },
   {
     "pr_number": 4227,
@@ -1101,20 +3999,84 @@
     "title": "Add ability to exclude files through .gitignore",
     "author": "civts",
     "number_commits": 8,
-    "filelist": [
-      "changelog/unreleased/issue-1514",
-      "cmd/restic/cmd_backup.go",
-      "cmd/restic/exclude.go",
-      "cmd/restic/exclude_test.go",
-      "doc/040_backup.rst",
-      "doc/bash-completion.sh",
-      "doc/man/restic-backup.1",
-      "doc/manual_rest.rst",
-      "go.mod",
-      "go.sum"
-    ],
     "create_date": "2023-03-02T10:47:51Z",
-    "changelog": "+Enhancement: Add the ability to use .gitignore files for excluding files\n+\n+Restic did not have the capability to parse `.gitignore`\n+files.\n+\n+The new optional flag -`-exclude-gitignored` tells\n+restic to take into account any `.gitignore` file\n+it finds and use it to exclude entities from the backup.\n+\n+https://github.com/restic/restic/issues/1514\n+https://github.com/restic/restic/pull/4227"
+    "changelog": "Enhancement: Add the ability to use .gitignore files for excluding files",
+    "additions": 675,
+    "deletions": 0,
+    "lines_in_file": 6735,
+    "filesize": 235293,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-1514",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 11,
+        "filesize": 386
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 687,
+        "filesize": 20216
+      },
+      {
+        "filename": "cmd/restic/exclude.go",
+        "additions": 68,
+        "deletions": 0,
+        "lines_in_file": 595,
+        "filesize": 15960
+      },
+      {
+        "filename": "cmd/restic/exclude_test.go",
+        "additions": 517,
+        "deletions": 0,
+        "lines_in_file": 877,
+        "filesize": 24207
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 649,
+        "filesize": 28972
+      },
+      {
+        "filename": "doc/bash-completion.sh",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 2832,
+        "filesize": 83153
+      },
+      {
+        "filename": "doc/man/restic-backup.1",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 217,
+        "filesize": 5799
+      },
+      {
+        "filename": "doc/manual_rest.rst",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 452,
+        "filesize": 21607
+      },
+      {
+        "filename": "go.mod",
+        "additions": 11,
+        "deletions": 0,
+        "lines_in_file": 84,
+        "filesize": 3488
+      },
+      {
+        "filename": "go.sum",
+        "additions": 50,
+        "deletions": 0,
+        "lines_in_file": 331,
+        "filesize": 31505
+      }
+    ]
   },
   {
     "pr_number": 4186,
@@ -1123,62 +4085,228 @@
     "author": "aneesh-n",
     "number_commits": 43,
     "number_comments": 6,
-    "filelist": [
-      ".github/workflows/tests.yml",
-      "changelog/unreleased/issue-4185",
-      "cmd/restic/global.go",
-      "doc/030_preparing_a_new_repo.rst",
-      "doc/040_backup.rst",
-      "go.mod",
-      "go.sum",
-      "internal/backend/local/local.go",
-      "internal/backend/smb/config.go",
-      "internal/backend/smb/config_test.go",
-      "internal/backend/smb/conpool.go",
-      "internal/backend/smb/smb.go",
-      "internal/backend/smb/smb_test.go",
-      "internal/backend/util/file_helper.go",
-      "internal/options/options.go",
-      "internal/test/vars.go"
-    ],
     "create_date": "2023-01-31T02:57:31Z",
-    "changelog": "+Enhancement: SMB backend: Add SMB backend\n+\n+Restic now supports SMB/CIFS backend. You can now add a SMB repository as `-r smb://<host>:<port>/<sharename>/<path>`.\n+\n+You can configure the SMB user name (for NTLM authentication) via the environment variable `RESTIC_SMB_USER`, SMB password via the environment variable `RESTIC_SMB_PASSWORD` and optionally SMB domain via the environment variable `RESTIC_SMB_DOMAIN`(default:'WORKGROUP').\n+\n+https://github.com/restic/restic/issues/4185"
+    "changelog": "Enhancement: SMB backend: Add SMB backend",
+    "additions": 1298,
+    "deletions": 259,
+    "lines_in_file": 4756,
+    "filesize": 191039,
+    "filelist": [
+      {
+        "filename": ".github/workflows/tests.yml",
+        "additions": 117,
+        "deletions": 1,
+        "lines_in_file": 441,
+        "filesize": 16471
+      },
+      {
+        "filename": "changelog/unreleased/issue-4185",
+        "additions": 7,
+        "deletions": 0,
+        "lines_in_file": 7,
+        "filesize": 480
+      },
+      {
+        "filename": "cmd/restic/global.go",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 664,
+        "filesize": 21774
+      },
+      {
+        "filename": "doc/030_preparing_a_new_repo.rst",
+        "additions": 45,
+        "deletions": 0,
+        "lines_in_file": 890,
+        "filesize": 36108
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 804,
+        "filesize": 36326
+      },
+      {
+        "filename": "go.mod",
+        "additions": 3,
+        "deletions": 1,
+        "lines_in_file": 86,
+        "filesize": 3661
+      },
+      {
+        "filename": "go.sum",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 355,
+        "filesize": 33642
+      },
+      {
+        "filename": "internal/backend/local/local.go",
+        "additions": 45,
+        "deletions": 257,
+        "lines_in_file": 161,
+        "filesize": 4909
+      },
+      {
+        "filename": "internal/backend/smb/config.go",
+        "additions": 124,
+        "deletions": 0,
+        "lines_in_file": 124,
+        "filesize": 4810
+      },
+      {
+        "filename": "internal/backend/smb/config_test.go",
+        "additions": 79,
+        "deletions": 0,
+        "lines_in_file": 79,
+        "filesize": 2031
+      },
+      {
+        "filename": "internal/backend/smb/conpool.go",
+        "additions": 243,
+        "deletions": 0,
+        "lines_in_file": 243,
+        "filesize": 6444
+      },
+      {
+        "filename": "internal/backend/smb/smb.go",
+        "additions": 259,
+        "deletions": 0,
+        "lines_in_file": 259,
+        "filesize": 8156
+      },
+      {
+        "filename": "internal/backend/smb/smb_test.go",
+        "additions": 58,
+        "deletions": 0,
+        "lines_in_file": 58,
+        "filesize": 1353
+      },
+      {
+        "filename": "internal/backend/util/file_helper.go",
+        "additions": 302,
+        "deletions": 0,
+        "lines_in_file": 302,
+        "filesize": 8411
+      },
+      {
+        "filename": "internal/options/options.go",
+        "additions": 5,
+        "deletions": 0,
+        "lines_in_file": 225,
+        "filesize": 4586
+      },
+      {
+        "filename": "internal/test/vars.go",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 58,
+        "filesize": 1877
+      }
+    ]
   },
   {
     "pr_number": 4058,
     "title": "Reconnect sftp connection",
     "author": "ibash",
     "number_commits": 2,
+    "create_date": "2022-11-29T18:41:01Z",
+    "additions": 187,
+    "deletions": 92,
+    "lines_in_file": 845,
+    "filesize": 20143,
     "filelist": [
-      "internal/backend/sftp/config.go",
-      "internal/backend/sftp/connection.go",
-      "internal/backend/sftp/sftp.go"
-    ],
-    "create_date": "2022-11-29T18:41:01Z"
+      {
+        "filename": "internal/backend/sftp/config.go",
+        "additions": 4,
+        "deletions": 2,
+        "lines_in_file": 96,
+        "filesize": 2792
+      },
+      {
+        "filename": "internal/backend/sftp/connection.go",
+        "additions": 129,
+        "deletions": 0,
+        "lines_in_file": 129,
+        "filesize": 2888
+      },
+      {
+        "filename": "internal/backend/sftp/sftp.go",
+        "additions": 54,
+        "deletions": 90,
+        "lines_in_file": 620,
+        "filesize": 14463
+      }
+    ]
   },
   {
     "pr_number": 3863,
     "title": "Add option to follow symbolic links",
     "author": "cccapon",
     "number_commits": 2,
+    "create_date": "2022-08-10T18:38:52Z",
+    "additions": 42,
+    "deletions": 20,
+    "lines_in_file": 1797,
+    "filesize": 50595,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "internal/archiver/archiver.go",
-      "internal/archiver/scanner.go"
-    ],
-    "create_date": "2022-08-10T18:38:52Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 4,
+        "deletions": 0,
+        "lines_in_file": 753,
+        "filesize": 22074
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 19,
+        "deletions": 9,
+        "lines_in_file": 890,
+        "filesize": 24953
+      },
+      {
+        "filename": "internal/archiver/scanner.go",
+        "additions": 19,
+        "deletions": 11,
+        "lines_in_file": 154,
+        "filesize": 3568
+      }
+    ]
   },
   {
     "pr_number": 3747,
     "title": "Verify cache on check",
     "author": "MichaelEischer",
     "number_commits": 3,
+    "create_date": "2022-05-10T19:39:54Z",
+    "additions": 106,
+    "deletions": 22,
+    "lines_in_file": 954,
+    "filesize": 24831,
     "filelist": [
-      "cmd/restic/cmd_check.go",
-      "internal/cache/backend.go",
-      "internal/cache/cache.go"
-    ],
-    "create_date": "2022-05-10T19:39:54Z"
+      {
+        "filename": "cmd/restic/cmd_check.go",
+        "additions": 17,
+        "deletions": 5,
+        "lines_in_file": 417,
+        "filesize": 12038
+      },
+      {
+        "filename": "internal/cache/backend.go",
+        "additions": 81,
+        "deletions": 17,
+        "lines_in_file": 278,
+        "filesize": 7047
+      },
+      {
+        "filename": "internal/cache/cache.go",
+        "additions": 8,
+        "deletions": 0,
+        "lines_in_file": 259,
+        "filesize": 5746
+      }
+    ]
   },
   {
     "pr_number": 3405,
@@ -1186,35 +4314,139 @@
     "title": "backup --files-from-verbatim allow merging snapshots",
     "author": "gmgigi96",
     "number_commits": 19,
-    "filelist": [
-      "changelog/unreleased/pull-3405",
-      "cmd/restic/cmd_backup.go",
-      "doc/040_backup.rst",
-      "internal/archiver/archiver.go",
-      "internal/archiver/archiver_test.go",
-      "internal/archiver/scanner.go",
-      "internal/archiver/tree.go",
-      "internal/archiver/tree_test.go",
-      "internal/restic/node.go"
-    ],
     "create_date": "2021-05-19T14:06:19Z",
-    "changelog": "+Enhancement: Add incremental backups\n+\n+Restic allowed to backup files from a list passed as parameter and this created\n+a new snapshot, containing only the new backuped files. Now, using the --merge\n+option, the new snapshot will contain also the files (not included in the list file passed)\n+of a previous parent snapshot.\n+\n+https://github.com/restic/restic/issues/3118\n+https://forum.restic.net/t/backup-parent-behavior/3286"
+    "changelog": "Enhancement: Add incremental backups",
+    "additions": 1073,
+    "deletions": 43,
+    "lines_in_file": 7038,
+    "filesize": 188652,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-3405",
+        "additions": 9,
+        "deletions": 0,
+        "lines_in_file": 9,
+        "filesize": 421
+      },
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 14,
+        "deletions": 8,
+        "lines_in_file": 748,
+        "filesize": 21610
+      },
+      {
+        "filename": "doc/040_backup.rst",
+        "additions": 10,
+        "deletions": 0,
+        "lines_in_file": 599,
+        "filesize": 26297
+      },
+      {
+        "filename": "internal/archiver/archiver.go",
+        "additions": 120,
+        "deletions": 27,
+        "lines_in_file": 940,
+        "filesize": 26364
+      },
+      {
+        "filename": "internal/archiver/archiver_test.go",
+        "additions": 896,
+        "deletions": 2,
+        "lines_in_file": 3156,
+        "filesize": 76318
+      },
+      {
+        "filename": "internal/archiver/scanner.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 146,
+        "filesize": 3432
+      },
+      {
+        "filename": "internal/archiver/tree.go",
+        "additions": 10,
+        "deletions": 4,
+        "lines_in_file": 306,
+        "filesize": 6706
+      },
+      {
+        "filename": "internal/archiver/tree_test.go",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 468,
+        "filesize": 12223
+      },
+      {
+        "filename": "internal/restic/node.go",
+        "additions": 12,
+        "deletions": 0,
+        "lines_in_file": 666,
+        "filesize": 15281
+      }
+    ]
   },
   {
     "pr_number": 2995,
     "title": "Support pulling backup from remote sftp server",
     "author": "YoshieraHuang",
     "number_commits": 2,
+    "create_date": "2020-10-07T07:52:18Z",
+    "additions": 377,
+    "deletions": 10,
+    "lines_in_file": 1159,
+    "filesize": 32349,
     "filelist": [
-      "cmd/restic/cmd_backup.go",
-      "go.mod",
-      "internal/fs/file_sftp.go",
-      "internal/fs/fs_sftp.go",
-      "internal/fs/stat_unix.go",
-      "internal/fs/stat_windows.go",
-      "internal/restic/node_linux.go"
-    ],
-    "create_date": "2020-10-07T07:52:18Z"
+      {
+        "filename": "cmd/restic/cmd_backup.go",
+        "additions": 58,
+        "deletions": 6,
+        "lines_in_file": 681,
+        "filesize": 19507
+      },
+      {
+        "filename": "go.mod",
+        "additions": 1,
+        "deletions": 1,
+        "lines_in_file": 52,
+        "filesize": 2132
+      },
+      {
+        "filename": "internal/fs/file_sftp.go",
+        "additions": 99,
+        "deletions": 0,
+        "lines_in_file": 99,
+        "filesize": 3115
+      },
+      {
+        "filename": "internal/fs/fs_sftp.go",
+        "additions": 168,
+        "deletions": 0,
+        "lines_in_file": 168,
+        "filesize": 4306
+      },
+      {
+        "filename": "internal/fs/stat_unix.go",
+        "additions": 21,
+        "deletions": 1,
+        "lines_in_file": 57,
+        "filesize": 1160
+      },
+      {
+        "filename": "internal/fs/stat_windows.go",
+        "additions": 22,
+        "deletions": 1,
+        "lines_in_file": 54,
+        "filesize": 1115
+      },
+      {
+        "filename": "internal/restic/node_linux.go",
+        "additions": 8,
+        "deletions": 1,
+        "lines_in_file": 48,
+        "filesize": 1014
+      }
+    ]
   },
   {
     "pr_number": 2862,
@@ -1222,29 +4454,147 @@
     "title": "mount support on windows without cgo",
     "author": "fgma",
     "number_commits": 17,
-    "filelist": [
-      "changelog/unreleased/pull-2862",
-      "cmd/restic/cmd_mount.go",
-      "cmd/restic/cmd_mount_util.go",
-      "cmd/restic/cmd_mount_util_windows.go",
-      "doc/050_restore.rst",
-      "go.mod",
-      "go.sum",
-      "internal/fuse/blobcache.go",
-      "internal/fuse/config.go",
-      "internal/fuse/dir.go",
-      "internal/fuse/fs_node_filtered_windows.go",
-      "internal/fuse/fs_node_root_windows.go",
-      "internal/fuse/fs_node_snapshot_dir_windows.go",
-      "internal/fuse/fs_node_snapshots_dir_windows.go",
-      "internal/fuse/fuse_fs_windows.go",
-      "internal/fuse/root.go",
-      "internal/fuse/snapshot_manager_windows.go",
-      "internal/fuse/snapshots_dir.go",
-      "internal/fuse/util.go"
-    ],
     "create_date": "2020-08-01T14:14:52Z",
-    "changelog": "+Enhancement: Mount support on windows using winfsp\n+\n+Mounting repsitories is now supported on windows using winfsp.\n+\n+https://github.com/restic/restic/pull/2862"
+    "changelog": "Enhancement: Mount support on windows using winfsp",
+    "additions": 1355,
+    "deletions": 135,
+    "lines_in_file": 2794,
+    "filesize": 88074,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/pull-2862",
+        "additions": 5,
+        "deletions": 0,
+        "lines_in_file": 5,
+        "filesize": 159
+      },
+      {
+        "filename": "cmd/restic/cmd_mount.go",
+        "additions": 10,
+        "deletions": 83,
+        "lines_in_file": 113,
+        "filesize": 3588
+      },
+      {
+        "filename": "cmd/restic/cmd_mount_util.go",
+        "additions": 93,
+        "deletions": 0,
+        "lines_in_file": 93,
+        "filesize": 2018
+      },
+      {
+        "filename": "cmd/restic/cmd_mount_util_windows.go",
+        "additions": 65,
+        "deletions": 0,
+        "lines_in_file": 65,
+        "filesize": 1508
+      },
+      {
+        "filename": "doc/050_restore.rst",
+        "additions": 7,
+        "deletions": 4,
+        "lines_in_file": 139,
+        "filesize": 5655
+      },
+      {
+        "filename": "go.mod",
+        "additions": 1,
+        "deletions": 0,
+        "lines_in_file": 54,
+        "filesize": 2212
+      },
+      {
+        "filename": "go.sum",
+        "additions": 2,
+        "deletions": 0,
+        "lines_in_file": 269,
+        "filesize": 25985
+      },
+      {
+        "filename": "internal/fuse/blobcache.go",
+        "additions": 3,
+        "deletions": 0,
+        "lines_in_file": 90,
+        "filesize": 2045
+      },
+      {
+        "filename": "internal/fuse/config.go",
+        "additions": 14,
+        "deletions": 0,
+        "lines_in_file": 14,
+        "filesize": 310
+      },
+      {
+        "filename": "internal/fuse/dir.go",
+        "additions": 0,
+        "deletions": 24,
+        "lines_in_file": 200,
+        "filesize": 4608
+      },
+      {
+        "filename": "internal/fuse/fs_node_filtered_windows.go",
+        "additions": 249,
+        "deletions": 0,
+        "lines_in_file": 249,
+        "filesize": 5271
+      },
+      {
+        "filename": "internal/fuse/fs_node_root_windows.go",
+        "additions": 118,
+        "deletions": 0,
+        "lines_in_file": 118,
+        "filesize": 2831
+      },
+      {
+        "filename": "internal/fuse/fs_node_snapshot_dir_windows.go",
+        "additions": 322,
+        "deletions": 0,
+        "lines_in_file": 322,
+        "filesize": 7200
+      },
+      {
+        "filename": "internal/fuse/fs_node_snapshots_dir_windows.go",
+        "additions": 189,
+        "deletions": 0,
+        "lines_in_file": 189,
+        "filesize": 4472
+      },
+      {
+        "filename": "internal/fuse/fuse_fs_windows.go",
+        "additions": 140,
+        "deletions": 0,
+        "lines_in_file": 140,
+        "filesize": 3418
+      },
+      {
+        "filename": "internal/fuse/root.go",
+        "additions": 0,
+        "deletions": 12,
+        "lines_in_file": 69,
+        "filesize": 1551
+      },
+      {
+        "filename": "internal/fuse/snapshot_manager_windows.go",
+        "additions": 91,
+        "deletions": 0,
+        "lines_in_file": 91,
+        "filesize": 2248
+      },
+      {
+        "filename": "internal/fuse/snapshots_dir.go",
+        "additions": 0,
+        "deletions": 12,
+        "lines_in_file": 528,
+        "filesize": 12039
+      },
+      {
+        "filename": "internal/fuse/util.go",
+        "additions": 46,
+        "deletions": 0,
+        "lines_in_file": 46,
+        "filesize": 956
+      }
+    ]
   },
   {
     "pr_number": 2555,
@@ -1252,13 +4602,41 @@
     "title": "Issue2554 - history option for snapshots command",
     "author": "ulrikian",
     "number_commits": 6,
-    "filelist": [
-      "changelog/unreleased/issue-2554",
-      "cmd/restic/cmd_snapshots.go",
-      "internal/restic/snapshot_history.go",
-      "internal/restic/snapshot_history_test.go"
-    ],
     "create_date": "2020-01-19T18:23:08Z",
-    "changelog": "+Enhancement: New option history in snapshots command\n+\n+I've added a new option for the snapshots command that shows the history of the snapshots\n+\n+example:\n+\n+./restic -r s3:s3.amazonaws.com/xxx --password-file ./restic.password snapshots --history --last\n+\n+repository xxx opened successfully, password is correct\n+ID        Time                 Host          Tags        Paths\n+----------------------------------------------------------------\n+9a587b78  2020-01-18 01:00:08  xxx2019              /groups\n+----------------------------------------------------------------\n+1 snapshots\n+\n+Snapshot History\n+Period  Current  Consecutive Previous Backups\n+---------------------------------------------\n+Daily   false    1\n+Weekly  true     3\n+---------------------------------------------\n+\n+\n+https://github.com/restic/restic/issues/2554"
+    "changelog": "Enhancement: New option history in snapshots command",
+    "additions": 534,
+    "deletions": 0,
+    "lines_in_file": 882,
+    "filesize": 24311,
+    "filelist": [
+      {
+        "filename": "changelog/unreleased/issue-2554",
+        "additions": 24,
+        "deletions": 0,
+        "lines_in_file": 24,
+        "filesize": 815
+      },
+      {
+        "filename": "cmd/restic/cmd_snapshots.go",
+        "additions": 13,
+        "deletions": 0,
+        "lines_in_file": 361,
+        "filesize": 9293
+      },
+      {
+        "filename": "internal/restic/snapshot_history.go",
+        "additions": 220,
+        "deletions": 0,
+        "lines_in_file": 220,
+        "filesize": 6432
+      },
+      {
+        "filename": "internal/restic/snapshot_history_test.go",
+        "additions": 277,
+        "deletions": 0,
+        "lines_in_file": 277,
+        "filesize": 7771
+      }
+    ]
   }
 ]
